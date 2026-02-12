@@ -7,7 +7,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Oswald:wght@200..700&family=Roboto+Slab:wght@100..900&display=swap');
         body {
-            background: linear-gradient(rgb(242, 244, 225), rgb(0, 0, 0));
+            background: linear-gradient(rgb(190, 195, 146), rgb(0, 0, 0));
             color: white;
             display: flex;
             justify-content: center;
@@ -15,12 +15,13 @@
             min-height: 100vh;
             main {
                 h1 {
+                    color: rgb(249, 249, 195);
                     font-family: "Roboto Slab", serif;
                     font-size: 3.4rem;
                     margin: 0;
                 }
                 img {
-                    border: 6px solid white;
+                    border: 6px solid rgb(249, 249, 195);
                     border-radius: 50%;
                     height: 250px;
                     width: 250;
@@ -30,9 +31,48 @@
                     margin:  1rem auto;
                 }
                 h4 {
+                    color: rgb(249, 249, 195);
                     font-family: "Dancing Script", cursive;
                     text-align: center;
                     font-size: 1.4rem;
+                }
+            }
+            menu {
+                display: flex;
+                flex-direction: column;
+                gap: 0.6rem;
+                
+                a:link, a:visited {
+                    background-color: rgb(249, 249, 195);
+                    color: black;
+                    border-radius: 10rem;
+                    padding: 0.4rem;
+                    display: flex;
+                    align-items: center;
+                    text-decoration: none;
+
+                    span {
+                        font-family: "Roboto Slab", serif;
+                        background-color: rgb(0, 0, 0);
+                        color: rgb(249, 249, 195);
+                        border-radius: 50%;
+                        font-size: 2rem;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 80px;
+                        width: 80px;
+                    }
+
+                    h4 {
+                        color: black;
+                        margin: 0;
+                    }
+
+                    small {
+
+                    }
+
                 }
             }
         }
@@ -44,6 +84,36 @@
         <h1>ADSO 3314566</h1>
         <img src="./caricatura IA.png" alt="">
         <h4>Brayan Hernandez</h4>
+        <menu>
+            <a href="01-emmet">
+                <span>01</span>
+                <aside>
+                    <h4>Emmet</h4>
+                    <small>Work Flow - Markup & Styling</small>
+                </aside>
+            </a>
+            <a href="02-html">
+                <span>02</span>
+                <aside>
+                    <h4>Html</h4>
+                    <small>Structure - Hypertext Markup Language</small>
+                </aside>
+            </a>
+            <a href="03-css">
+                <span>03</span>
+                <aside>
+                    <h4>Css</h4>
+                    <small>Look & Fell - Cascading Style Sheets</small>
+                </aside>
+            </a>
+            <a href="04-js">
+                <span>04</span>
+                <aside>
+                    <h4>Javascript</h4>
+                    <small>Behavior - Programing Language</small>
+                </aside>
+            </a>
+        </menu>
     </main>
 </body>
 </html>
