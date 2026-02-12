@@ -8,12 +8,12 @@
 
 ---
 
-| ID | THEME | Description                               |
-|--- |---         |                                      |
-|01  | Emmet      |Work Flow - Markup & Styling          |
-|02  | Html       |Structure - Hypertext Markup Language |
-|03  | Css        |Look & Fell - Cascading Style Sheets  |
-|04  | Javascript |Beahavior - Programing Language       |
+| ID | THEME | Description
+|--- | ---          |---
+|01  | Emmet        |Work Flow - Markup & Styling           |
+|02  | Html         |Structure - Hipertext Markup Language  | 
+|03  | Css          |Look & Fell - Cascading Style Sheets   |
+|04  | Javascript   |Behavior - Programing Language         |
 
 ![brayanhernandez007](https://adso3314566-ecru.vercel.app/caricatura%20IA.png)
 
