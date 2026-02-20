@@ -28,13 +28,13 @@
             background-attachment: fixed;
             background-size: cover;
             font-family: "Roboto Slab", serif;
-            color: rgb(152, 241, 124);
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            color: rgb(193, 247, 179);
+            margin: 0;
         }
 
         img {
+            border: 6px solid rgb(193, 247, 179);
+            border-radius: 50%;
             animation: movimiento 2.5s linear infinite;
             justify-content: center;
         }
@@ -44,6 +44,8 @@
         }
 
         main {
+            max-width: 900px;
+            margin: 0 auto;
             text-align: center;
         }
 
@@ -71,7 +73,7 @@
         }
 
         .cuadro {
-            background: rgba(70, 69, 69, 0.75);
+            background: linear-gradient(45deg, #000000, #40a258);
             padding: 25px;
             border-radius: 15px;
             width: 400px;
@@ -80,14 +82,52 @@
             text-align: left;
         }
 
+        .cuadro2 {
+            background: linear-gradient(45deg, #2EB458, #030B05);
+            padding: 10px;
+            border-radius: 10px;
+            width: 300px;
+            margin: 20px auto;
+            color: rgb(0, 0, 0);
+            text-align: left;
+            font-family: "Bungee", sans-serif;
+        }
+
+        .cuadro3 {
+            background: rgba(206, 206, 206, 0.75);
+            padding: 10px;
+            border-radius: 10px;
+            width: 370px;
+            margin: 20px auto;
+            color: rgb(0, 0, 0);
+            justify-content: center;
+        }
+
+        .cuadro3-izq {
+            background: rgba(206, 206, 206, 0.75);
+            padding: 10px;
+            border-radius: 10px;
+            width: 370px;
+            margin: 20px auto;
+            color: black;
+            font-size: 0.7rem;
+        }
+
 
         .cuadro h4 {
-            color: rgb(152, 241, 124);
+            font-family: "Oswald", sans-serif;
+            font-size: 16px;
+            color: rgb(193, 247, 179);
         }
 
         .cuadro h2 {
             text-align: center;
-            color: rgb(152, 241, 124);
+            color: rgb(193, 247, 179);
+        }
+
+        .cuadro p {
+            color: #DCDCDC;
+            text-align: center;
         }
     </style>
 </head>
@@ -105,33 +145,33 @@
         <h4>Work Flow - Merkup & Styling</h4>
         <img src="img/logo-emmet.png" width="250px" height="250px" alt="">
         <section class="cuadro">
-            <h2>Nesting ></h2>
-            <h4>Example: </h4>
-            <p>ul>li>a 🔁</p>
-            <h4>Result:</h4>
-            <xmp>
+            <h2>Anidar Elementos<br>">"</h2>
+            <h4>Ejemplo: </h4>
+            <p class="cuadro2">ul>li>a 🔁</p>
+            <h4>Resultado:</h4>
+            <xmp class="cuadro3">
                 <ul>
                     <li><a href=""></a></li>
                 </ul>
             </xmp>
         </section>
         <section class="cuadro">
-            <h2>Sibling + ></h2>
-            <h4>Example: </h4>
-            <p>section+header+nav 🔁</p>
-            <h4>Result:</h4>
-            <xmp>
+            <h2>Elementos Hermanos<br>"+"</h2>
+            <h4>Ejemplo: </h4>
+            <p class="cuadro2">section+header+nav 🔁</p>
+            <h4>Resultado:</h4>
+            <xmp class="cuadro3">
                 <section></section>
                 <header></header>
                 <nav></nav>
             </xmp>
         </section>
         <section class="cuadro">
-            <h2>Repeat *</h2>
-            <h4>Example: </h4>
-            <p>ul>li*3 🔁</p>
-            <h4>Result:</h4>
-            <xmp>
+            <h2>Repetir Elementos <br>(*)</h2>
+            <h4>Ejemplo: </h4>
+            <p class="cuadro2">ul>li*3 🔁</p>
+            <h4>Resultado:</h4>
+            <xmp class="cuadro3">
                 <ul>
                     <li></li>
                     <li></li>
@@ -139,15 +179,123 @@
                 </ul>
             </xmp>
         </section>
-                <section class="cuadro">
-            <h2>Repeat *</h2>
-            <h4>Example: </h4>
-            <p>ul>li*3 🔁</p>
-            <h4>Result:</h4>
-            <xmp>
-
+        <section class="cuadro">
+            <h2>Atributo Clase <br>"."</h2>
+            <h4>Ejemplo: </h4>
+            <p class="cuadro2">div.contenedor 🔁<br> .contenedor2 🔁</p>
+            <h4>Resultado:</h4>
+            <xmp class="cuadro3">
+                <div class="contenedor"></div>
+                <div class="contenedor2"></div>
             </xmp>
         </section>
+        <section class="cuadro">
+            <h2>Multiples Clases <br>""..."</h2>
+            <h4>Ejemplo: </h4>
+            <p class="cuadro2">div.clase1.clase2.clasen 🔁</p>
+            <h4>Resultado:</h4>
+            <xmp class="cuadro3-izq">
+                <div class="clase1 clase2 clasen"></div>
+            </xmp>
+        </section>
+        <section class="cuadro">
+            <h2>Atributo Identificador <br>"#"</h2>
+            <h4>Ejemplo: </h4>
+            <p class="cuadro2">nav#menu 🔁</p>
+            <h4>Resultado:</h4>
+            <xmp class="cuadro3">
+                <nav id="menu"></nav>
+            </xmp>
+        </section>
+        <section class="cuadro">
+            <h2>Adicionar Texto <br>"{ }"</h2>
+            <h4>Ejemplo: </h4>
+            <p class="cuadro2">div{Lorem Ipsum Dolor} 🔁<br> a{Click Aquí} 🔁</p>
+            <h4>Resultado:</h4>
+            <xmp class="cuadro3">
+                <div>Lorem Ipsum Dolor</div>
+                <a href=“”>Click Aquí</a>
+            </xmp>
+        </section>
+        <section class="cuadro">
+            <h2>Personalizar Atributos<br>"[ ]"</h2>
+            <h4>Ejemplo: </h4>
+            <p class="cuadro2">a[href=www.google.com]🔁</p>
+            <h4>Resultado:</h4>
+            <xmp class="cuadro3">
+                <a href="www.google.com"></a>
+            </xmp>
+        </section>
+        <section class="cuadro">
+            <h2>Números Consecutivos<br>"$"</h2>
+            <h4>Ejemplo: </h4>
+            <p class="cuadro2">ul>li.num$*3 🔁 <br> section>article.sec$$$*3 🔁</p>
+            <h4>Resultado:</h4>
+            <xmp class="cuadro3">
+                <ul>
+                    <li class="num1"></li>
+                    <li class="num2"></li>
+                    <li class="num3"></li>
+                </ul>
+            </xmp>
+        </section>
+        <section class="cuadro">
+            <h2>Dirección Números Consecutivos<br>"@-"</h2>
+            <h4>Ejemplo: </h4>
+            <p class="cuadro2">ul>li.num$@-*3 🔁</p>
+            <h4>Resultado:</h4>
+            <xmp class="cuadro3">
+                <ul>
+                    <li class="num3"></li>
+                    <li class="num2"></li>
+                    <li class="num1"></li>
+                </ul>
+            </xmp>
+        </section>
+        <section class="cuadro">
+            <h2>Base Números Consecutivos<br>"@n"</h2>
+            <h4>Ejemplo: </h4>
+            <p class="cuadro2">ul>li.num$@3*4 🔁</p>
+            <h4>Resultado:</h4>
+            <xmp class="cuadro3">
+                <ul>
+                    <li class="num3"></li>
+                    <li class="num4"></li>
+                    <li class=“num5"></li>
+                    <li class=“num6"></li>
+                </ul>
+            </xmp>
+        </section>
+        <section class="cuadro">
+            <h2>Subir Nivel<br>"^"</h2>
+            <h4>Ejemplo: </h4>
+            <p class="cuadro2">section>article>div^p 🔁</p>
+            <h4>Resultado:</h4>
+            <xmp class="cuadro3">
+                <section>
+                    <article>
+                        <div></div>
+                    </article>
+                    <p></p>
+                </section>
+            </xmp>
+        </section>
+        <section class="cuadro">
+            <h2>Agrupar Elementos<br>"()"</h2>
+            <h4>Ejemplo: </h4>
+            <p class="cuadro2">(header>nav)(section>article) 🔁</p>
+            <h4>Resultado:</h4>
+            <xmp class="cuadro3">
+                <header>
+                    <nav></nav>
+                </header>
+                <section>
+                    <article></article>
+                </section>
+            </xmp>
+        </section>
+
+
     </main>
 </body>
 
