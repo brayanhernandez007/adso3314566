@@ -54,22 +54,23 @@
             position: fixed;
             left: 20px;
             top: 20px;
-            border: 2px solid white;
+            border: 2px solid black;
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 50px;
             width: 50px;
-            opacity: .7;
-            transition: transform 0.3s ease, opacity 0.3s ease;
-            border-color: rgb(152, 241, 124);
+            background-color: rgba(255, 255, 255, 0.2);
+            opacity: .8;
+            transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
         }
 
 
         a:hover {
             transform: scale(1.2);
             opacity: 1;
+            background-color: rgba(0, 0, 0, 0.3);
         }
 
         .cuadro {
@@ -129,13 +130,34 @@
             color: #DCDCDC;
             text-align: center;
         }
+
+
+        .cuadrom2 {
+            background: rgba(206, 206, 206, 0.85);
+            padding: 20px;
+            border-radius: 15px;
+            max-width: 600px;
+            width: 370px;
+            margin: 20px auto;
+            color: #000;
+            font-size: 14px;
+            line-height: 1.6;
+            overflow-x: auto;
+            /* Activa barra horizontal */
+            white-space: nowrap;
+            /* Evita que el texto se baje */
+            text-align: left;
+            /* Código alineado a la izquierda */
+
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
     </style>
 </head>
 
 <body>
     <main>
         <a href="./index.html">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#f9f991" viewBox="0 0 256 256">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#000000" viewBox="0 0 256 256">
                 <path
                     d="M232,56A104.11,104.11,0,0,1,128,160H51.31l34.35,34.34a8,8,0,0,1-11.32,11.32l-48-48a8,8,0,0,1,0-11.32l48-48a8,8,0,0,1,11.32,11.32L51.31,144H128a88.1,88.1,0,0,0,88-88,8,8,0,0,1,16,0Z">
                 </path>
@@ -167,7 +189,7 @@
             </xmp>
         </section>
         <section class="cuadro">
-            <h2>Repetir Elementos <br>(*)</h2>
+            <h2>Repetir Elementos <br>"*"</h2>
             <h4>Ejemplo: </h4>
             <p class="cuadro2">ul>li*3 🔁</p>
             <h4>Resultado:</h4>
@@ -190,7 +212,7 @@
             </xmp>
         </section>
         <section class="cuadro">
-            <h2>Multiples Clases <br>""..."</h2>
+            <h2>Multiples Clases <br>"..."</h2>
             <h4>Ejemplo: </h4>
             <p class="cuadro2">div.clase1.clase2.clasen 🔁</p>
             <h4>Resultado:</h4>
@@ -294,8 +316,47 @@
                 </section>
             </xmp>
         </section>
+        <section class="cuadro">
+            <h2>Generar "Lorem Ipsum Dolor"<br>"lorem"</h2>
+            <h4>Ejemplo: </h4>
+            <p class="cuadro2">lorem 🔁 <br> lorem20 🔁 <br> lorem*5 🔁</p>
+            <h4>Resultado:</h4>
+            <xmp class="cuadrom2">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta veniam enim, vero molestias perferendis
+                quis doloremque minus aliquam reiciendis iure?
+            </xmp>
+        </section>
+        <section class="cuadro">
+            <h2>Documents HTML<br>"html:"</h2>
+            <h4>Ejemplo: </h4>
+            <p class="cuadro2"> html:xs 🔁 <br> html:xt 🔁 <br> html:4s 🔁 <br> html:4t 🔁 <br> html:5 🔁</p>
+            <h4>Resultado:</h4>
+            <xmp class="cuadrom2">
+                <!DOCTYPE html>
+                <html lang="en">
 
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Document</title>
+                </head>
 
+                <body>
+
+                </body>
+
+                </html>
+            </xmp>
+        </section>
+        <section class="cuadro">
+            <h2>Meta TAGS<br>"meta:"</h2>
+            <h4>Ejemplo: </h4>
+            <p class="cuadro2">meta:vp 🔁 </p>
+            <h4>Resultado:</h4>
+            <xmp class="cuadrom2">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            </xmp>
+        </section>
     </main>
 </body>
 
