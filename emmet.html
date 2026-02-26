@@ -131,6 +131,15 @@
             text-align: center;
         }
 
+        .cuadrom1 {
+            background: linear-gradient(45deg, #2EB458, #030B05);
+            padding: 10px;
+            border-radius: 10px;
+            width: 370px;
+            margin: 20px auto;
+            color: rgb(255, 255, 255);
+            font-family: "Bungee", sans-serif;
+        }
 
         .cuadrom2 {
             background: rgba(206, 206, 206, 0.85);
@@ -143,12 +152,8 @@
             font-size: 14px;
             line-height: 1.6;
             overflow-x: auto;
-            /* Activa barra horizontal */
             white-space: nowrap;
-            /* Evita que el texto se baje */
             text-align: left;
-            /* Código alineado a la izquierda */
-
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
         }
     </style>
@@ -357,7 +362,58 @@
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
             </xmp>
         </section>
+        <section class="cuadro">
+            <h2>Reto</h2>
+            <h4>Ejemplo: </h4>
+            <p class="cuadrom1">
+                header#header>nav.navbar.navbar-inverse>div.container>div.navbar-header>(button.navbar-toggle[type="button"]>span.sr-only{Toggle
+                navigation}+span.icon-bar*3)+a.navbar-brand[href="index.php"]>img[src="imgs/logo.png"
+                alt=""]^div.collapse>ul.nav.navbar-nav>li>a.link[href="index.html"]{Inicio}^li.active.link>a[href="login.html"]{Ingresar}^li>a.link[href="registro.html"]{Registrarse}^li>a.link[href="contacto.html"]{Contacto}
+                🔁 </p>
+            <h4>Resultado:</h4>
+            <xmp class="cuadrom2">
+                <header id="header">
+                    <nav class="navbar navbar-inverse">
+                        <div class="container">
+                            <div class="navbar-header">
+                                <button class="navbar-toggle" type="button"><span class="sr-only">Toggle
+                                        navigation</span><span class="icon-bar"></span><span
+                                        class="icon-bar"></span><span class="icon-bar"></span></button><a
+                                    href="index.php" class="navbar-brand"><img src="imgs/logo.png" alt=""></a>
+                                <div class="collapse">
+                                    <ul class="nav navbar-nav">
+                                        <li><a href="index.html" class="link">Inicio</a></li>
+                                        <li class="active link"><a href="login.html">Ingresar</a></li>
+                                        <li><a href="registro.html" class="link">Registrarse</a></li>
+                                        <li><a href="contacto.html" class="link">Contacto</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </header>
+            </xmp>
+        </section>
     </main>
 </body>
+<header id="header">
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header"> <button class="navbar-toggle" type="button"><span class="sr-only">Toggle
+                        navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span
+                        class="icon-bar"></span></button><a href="index.php" class="navbar-brand"><img
+                        src="imgs/logo.png" alt=""></a>
+                <div class="collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html" class="link">Inicio</a></li>
+                        <li class="active link"><a href="login.html">Ingresar</a></li>
+                        <li><a href="registro.html" class="link">Registrarse</a></li>
+                        <li><a href="contacto.html" class="link">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
 
 </html>
