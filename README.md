@@ -15,8 +15,7 @@
 |03  | Css          |Look & Fell - Cascading Style Sheets   |
 |04  | Javascript   |Behavior - Programing Language         |
 
-![brayanhernandez007](https://adso3314566-ecru.vercel.app/caricatura%20IA.png)
-
+![brayanhernandez007](https://adso3314566-ecru.vercel.app/caricatura%20IA%20-%20copia.png)
 
 [ADSO Files DRIVE](https://tinyurl.com/wnkk334u)
 
