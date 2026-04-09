@@ -15,10 +15,11 @@
 
     form {
         background-color: white;
-        width: 320px;
+        width: 340px;
         margin: 60px auto;
         padding: 25px;
-        border-radius: 10px;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     }
 
     h2 {
@@ -31,17 +32,17 @@
         margin-top: 20px;
     }
 
+    /* INPUTS PRINCIPALES */
     input {
         width: 93%;
         padding: 10px;
         border: 1px solid #ccc;
-        border-radius: 5px;
+        border-radius: 6px;
         outline: none;
     }
 
-    
-
-    label {
+    /* LABEL ANIMADO */
+    .campo label {
         position: absolute;
         left: 10px;
         top: 10px;
@@ -51,22 +52,82 @@
         transition: 0.3s;
     }
 
-    /* cuando seleccionas o escribes */
-    input:focus+label,
-    input:valid+label {
+    .campo input:focus+label,
+    .campo input:valid+label {
         top: -10px;
         font-size: 12px;
         color: #ff902f;
     }
 
+    /* BOTONES */
     button {
         width: 100%;
-        margin-top: 20px;
+        margin-top: 10px;
         padding: 10px;
         background-color: #ff902f;
         color: white;
         border: none;
-        border-radius: 5px;
+        border-radius: 6px;
+    }
+
+    /* OTROS INPUTS */
+    select,
+    textarea,
+    input[type="range"],
+    input[type="date"],
+    input[type="time"],
+    input[type="week"],
+    input[type="month"],
+    input[type="file"],
+    input[type="search"],
+    progress {
+        width: 100%;
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+
+    /* 🔥 INPUT COLOR MEJORADO */
+    input[type="color"] {
+        width: 100%;
+        height: 40px;
+        padding: 3px;
+        border: none;
+        cursor: pointer;
+    }
+
+    /* mejora visual del color */
+    input[type="color"]::-webkit-color-swatch {
+        border-radius: 6px;
+        border: none;
+    }
+
+    input[type="color"]::-webkit-color-swatch-wrapper {
+        padding: 0;
+    }
+
+    /* PREGUNTAS */
+    .pregunta {
+        margin-top: 15px;
+        font-weight: bold;
+        color: #444;
+    }
+
+    /* RADIO Y CHECKBOX */
+    .opcion {
+        display: block;
+        margin-bottom: 5px;
+        color: #333;
+    }
+
+    /* 🔥 HACER VISIBLES LOS INPUTS */
+    input[type="radio"],
+    input[type="checkbox"] {
+        width: auto;
+        margin-right: 5px;
+        accent-color: #ff902f;
+        /* 🔥 color visible */
+        transform: scale(1.2);
+        cursor: pointer;
     }
 </style>
 
@@ -103,20 +164,72 @@
 
                     <div class="campo">
                         <input type="text" required>
-                        <label>Nombre</label>
+                        <label>Escriba su nombre</label>
                     </div>
 
                     <div class="campo">
                         <input type="email" required>
-                        <label>Correo</label>
+                        <label>Ingrese su correo</label>
+                    </div>
+
+                    <div class="campo">
+                        <input type="password" required>
+                        <label>Cree una contraseña</label>
                     </div>
 
                     <div class="campo">
                         <input type="number" required>
-                        <label>Edad</label>
+                        <label>¿Cuál es su edad?</label>
                     </div>
 
+                    <p class="pregunta">¿Qué nivel deseas seleccionar?</p>
+                    <input type="range">
+
+                    <p class="pregunta">¿Cuál es su color favorito?</p>
+                    <input type="color">
+
+                    <p class="pregunta">Seleccione su fecha de nacimiento</p>
+                    <input type="date">
+
+                    <p class="pregunta">Seleccione una hora</p>
+                    <input type="time">
+
+                    <p class="pregunta">Seleccione una semana</p>
+                    <input type="week">
+
+                    <p class="pregunta">Seleccione un mes</p>
+                    <input type="month">
+
+                    <p class="pregunta">¿Qué desea buscar?</p>
+                    <input type="search" placeholder="Buscar...">
+
+                    <p class="pregunta">Suba un archivo</p>
+                    <input type="file">
+
+                    <p class="pregunta">Seleccione su género</p>
+                    <label class="opcion"><input type="radio" name="genero"> Masculino</label>
+                    <label class="opcion"><input type="radio" name="genero"> Femenino</label>
+
+                    <p class="pregunta">Seleccione sus intereses</p>
+                    <label class="opcion"><input type="checkbox"> Programación</label>
+                    <label class="opcion"><input type="checkbox"> Diseño</label>
+
+                    <p class="pregunta">Seleccione su ciudad</p>
+                    <select>
+                        <option>Bogotá</option>
+                        <option>Medellín</option>
+                        <option>Cali</option>
+                    </select>
+
+                    <p class="pregunta">Escriba un mensaje</p>
+                    <textarea rows="3"></textarea>
+
+                    <p class="pregunta">Nivel de progreso</p>
+                    <progress value="50" max="100"></progress>
+
+                    <button type="button">Botón</button>
                     <button type="submit">Enviar</button>
+                    <button type="reset">Limpiar</button>
                 </form>
             </section>
         </main>
