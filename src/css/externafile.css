@@ -1,0 +1,10 @@
+        div.adso {
+            background: linear-gradient(#bb4dff, rgb(120, 17, 132) 50%);
+            border-radius: 0.4rem;
+            color: #fff8;
+            padding: 1rem;
+            margin: 4rem auto;
+            font-size: 3.6rem;
+            font-family: "Roboto Slab", serif;
+            text-align: center;
+        }
