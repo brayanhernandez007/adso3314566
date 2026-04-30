@@ -4,19 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>07 - Inheritance</title>
+    <title>08 - Relative Units</title>
     <link rel="stylesheet" href="../src/css/css.css">
     <style>
-        section h3 {
-            color: rgb(91, 255, 255);
+        header ul {
+            font-family: "Roboto Slab", serif;
+            background-color: #bb4dff;
+            padding: 20px;
+            border-radius: 15px;
+            width: fit-content;
+            margin: 20px auto;
+            list-style-position: inside;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
         }
 
-        section li {
-            color: rgb(255, 91, 91) !important;    
+        li {
+            font-family: "Roboto Slab", serif;
         }
 
-        .important {
-            color: rgb(99, 255, 91) !important;
+        li.rel1 {
+            font-size: 15px;
+        }
+
+        li.rel2 {
+            font-size: 1.5em;
+        }
+
+        li.rel3 {
+            font-size: 2rem;
+        }
+
+        li.rel4 {
+            font-size: 2.4ex;
         }
     </style>
 </head>
@@ -45,40 +64,26 @@
         <br>
         <main>
             <header>
-                <h1>07 - Inheritance</h1>
-                <h2>Property is inherited from the father to all his descendants.</h2>
+                <h1>08 - Relative Units</h1>
+                <h2>Specify a length relative to another length property.</h2>
+                <ul>
+                    <li>Picxel (px)</li>
+                    <li>M (em)</li>
+                    <li>X (ex)</li>
+                    <li>Root M (rem)</li>
+                    <li>Viewports Units Horizontal (vh)</li>
+                    <li>Viewports Units Width (vw)</li>
+                    <li>Large Viewport Height (lvh, lvw)</li>
+                    <li>Small Viewport Height (svh, svw)</li>
+                    <li>Dinamic Viewport Height (dvh, dvw)</li>
+                </ul>
             </header>
             <section>
-                <h3>Video Games 2026</h3>
                 <ul>
-                    <li>
-                        Crimson Desert
-                        <ol>
-                            <li>Kliff</li>
-                            <li>Oongka</li>
-                        </ol>
-                    </li>
-                    <li>
-                        Pragmata
-                        <ol>
-                            <li>Hugh Williams</li>
-                            <li>Diana</li>
-                        </ol>
-                    </li>
-                    <li>
-                        Grand Theft Auto VI
-                        <ol>
-                            <li>Lucia Caminos</li>
-                            <li>Jason Duval</li>
-                        </ol>
-                    </li>
-                    <li>
-                        Resident Evil Requiem
-                        <ol>
-                            <li class="important">Leon S. Kennedy</li>
-                            <li>Grace Ashcroft</li>
-                        </ol>
-                    </li>
+                    <li class="rel1">px: 15px</li>
+                    <li class="rel2">em: 1.5em</li>
+                    <li class="rel3">rem: 2rem</li>
+                    <li class="rel4">ex: 2.4ex</li>
                 </ul>
             </section>
         </main>

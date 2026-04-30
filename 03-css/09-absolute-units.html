@@ -4,9 +4,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>01 - Document Style</title>
+    <title>09 - Absolute Units</title>
     <link rel="stylesheet" href="../src/css/css.css">
     <style>
+        header ul {
+            font-family: "Roboto Slab", serif;
+            background-color: #bb4dff;
+            padding: 20px;
+            border-radius: 15px;
+            width: fit-content;
+            margin: 20px auto;
+            list-style-position: inside;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+
+        section ul {
+            font-family: "Roboto Slab", serif;
+        }
+
+        li.abs1 {
+            font-size: 0.5in;
+        }
+
+        li.abs2 {
+            font-size: 1cm;
+        }
+        
+        li.abs3 {
+            font-size: 10mm;
+        }
+
+        li.abs4 {
+            font-size: 10pt;
+        }
+
+        li.abs5 {
+            font-size: 2pc;
+        }
+
 
     </style>
 </head>
@@ -35,10 +70,24 @@
         <br>
         <main>
             <header>
-                <h1>01 - Document Style</h1>
-                <h2></h2>
+                <h1>09 - Absolute Units</h1>
+                <h2>Specify a fixed length value. It doesn't matter if the screen's width or height changes.</h2>
+                <ul>
+                    <li>Inch (in)</li>
+                    <li>Centimeter (cm)</li>
+                    <li>Millimeter (mm)</li>
+                    <li>Point (pt)</li>
+                    <li>Pica (pc)</li>
+                </ul>
             </header>
             <section>
+                <ul>
+                    <li class="abs1">Inch: 0.5in</li>
+                    <li class="abs2">Centimeter: 1cm</li>
+                    <li class="abs3">Millimeter: 10mm</li>
+                    <li class="abs4">Point: 10pt</li>
+                    <li class="abs5">Pica: 2pc</li>
+                </ul>
             </section>
         </main>
 
