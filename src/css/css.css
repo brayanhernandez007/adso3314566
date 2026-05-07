@@ -31,6 +31,10 @@ body {
             text-align: center;
         }
 
+        h3 {
+            font-family: "Roboto Slab", serif;
+        }
+
         img {
             border: 6px solid #bb4dff;
             border-radius: 50%;

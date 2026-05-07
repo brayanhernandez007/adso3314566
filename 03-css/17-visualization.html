@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17 - Visualization</title>
+    <link rel="stylesheet" href="../src/css/css.css">
+    <style>
+
+        /* ══ DISPLAY / VISIBILITY ══ */
+        .display-wrap {
+            display: flex;
+            gap: 60px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .num-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 52px);
+            gap: 10px;
+        }
+
+        .num-box {
+            width: 52px;
+            height: 52px;
+            border: 1.5px solid #555;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            border-radius: 4px;
+        }
+
+        .display-none-5   .num-box:nth-child(5) { display: none; }
+        .visibility-hidden-5 .num-box:nth-child(5) { visibility: hidden; }
+
+        /* ══ OVERFLOW ══ */
+        .overflow-wrap {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .overflow-box {
+            width: 140px;
+            height: 120px;
+            border: 1.5px solid #555;
+            padding: 8px;
+            font-size: 0.75rem;
+            line-height: 1.5;
+        }
+
+        .overflow-box b {
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .overflow-visible { overflow: visible; }
+        .overflow-hidden  { overflow: hidden; }
+        /* ✅ FIX: overflow-y: scroll en lugar de overflow: scroll
+           para evitar el scrollbar horizontal innecesario */
+        .overflow-scroll  { overflow-y: scroll; }
+
+        /* ══ Z-INDEX ══ */
+        .z-wrap {
+            position: relative;
+            height: 160px;
+            width: 340px;
+        }
+
+        .z-box {
+            position: absolute;
+            width: 180px;
+            height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .z1 { background: #3a3a4a; top: 0;    left: 0;    z-index: 3; }
+        .z2 { background: #5a5a6a; top: 30px; left: 60px; z-index: 2; }
+        .z3 { background: #9a9aaa; top: 60px; left: 120px; z-index: 1; }
+
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="contenedor-botones">
+            <a href="../03-css/index3.html" class="boton">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#000" viewBox="0 0 256 256">
+                    <path d="M232,56A104.11,104.11,0,0,1,128,160H51.31l34.35,34.34a8,8,0,0,1-11.32,11.32l-48-48a8,8,0,0,1,0-11.32l48-48a8,8,0,0,1,11.32,11.32L51.31,144H128a88.1,88.1,0,0,0,88-88,8,8,0,0,1,16,0Z"></path>
+                </svg>
+            </a>
+            <a href="../index.html" class="boton">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
+                    <path d="M219.31,108.68l-80-80a16,16,0,0,0-22.62,0l-80,80A15.87,15.87,0,0,0,32,120v96a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V160h32v56a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V120A15.87,15.87,0,0,0,219.31,108.68ZM208,208H160V152a8,8,0,0,0-8-8H104a8,8,0,0,0-8,8v56H48V120l80-80,80,80Z"></path>
+                </svg>
+            </a>
+        </div>
+        <br><br>
+
+        <header>
+            <h1>17 - Visualization</h1>
+            <h2>
+                - Display: block | inline | none | flex | grid <br>
+                - Visibility: visible | hidden <br>
+                - Overflow: visible | hidden | scroll | auto <br>
+                - Z-Index: 1...n
+            </h2>
+        </header>
+
+        <section>
+
+            <!-- 1. Display: none  vs  visibility: hidden -->
+            <section>
+                <h3>Display / Visibility</h3>
+                <div class="display-wrap">
+
+                    <div>
+                        <p>Display</p>
+                        <div class="num-grid display-none-5">
+                            <div class="num-box">1</div>
+                            <div class="num-box">2</div>
+                            <div class="num-box">3</div>
+                            <div class="num-box">4</div>
+                            <div class="num-box">5</div>
+                            <div class="num-box">6</div>
+                            <div class="num-box">7</div>
+                            <div class="num-box">8</div>
+                            <div class="num-box">9</div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p>Visibility</p>
+                        <div class="num-grid visibility-hidden-5">
+                            <div class="num-box">1</div>
+                            <div class="num-box">2</div>
+                            <div class="num-box">3</div>
+                            <div class="num-box">4</div>
+                            <div class="num-box">5</div>
+                            <div class="num-box">6</div>
+                            <div class="num-box">7</div>
+                            <div class="num-box">8</div>
+                            <div class="num-box">9</div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- 2. Overflow -->
+            <section>
+                <h3>Overflow</h3>
+                <br>
+                <div class="overflow-wrap">
+                    <div class="overflow-box overflow-visible">
+                        <b>overflow: visible</b>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cras vitae dolor eu enim dignissim lacinia. Maecenas blandit. Morbi mi.
+                    </div>
+                    <div class="overflow-box overflow-hidden">
+                        <b>overflow: hidden</b>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cras vitae dolor eu enim dignissim lacinia. Maecenas blandit. Morbi mi.
+                    </div>
+                    <div class="overflow-box overflow-scroll">
+                        <b>overflow: scroll</b>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cras vitae dolor eu enim dignissim lacinia. Maecenas blandit. Morbi mi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cras vitae dolor eu enim dignissim lacinia. Maecenas blandit. Morbi mi.
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 3. Z-Index -->
+            <section>
+                <h3>Z-Index</h3>
+                <br>
+                <div class="z-wrap">
+                    <div class="z-box z1">1</div>
+                    <div class="z-box z2">2</div>
+                    <div class="z-box z3">3</div>
+                </div>
+            </section>
+
+        </section>
+    </main>
+</body>
+
+</html>
