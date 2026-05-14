@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../src/css/css.css">
     <style>
         .float-container {
-            overflow: hidden; /* ← clearfix: contiene los elementos flotados */
+            overflow: hidden;
             padding: 20px;
         }
 
@@ -31,6 +31,12 @@
             border-radius: 50%;
             object-fit: cover;
         }
+
+        .float-container p {
+            text-align: justify;
+            color: #ddd;
+            line-height: 1.5;
+        }
     </style>
 </head>
 
@@ -48,19 +54,22 @@
                 </svg>
             </a>
         </div>
+        <br><br>
 
         <header>
             <h1>16 - Float</h1>
             <h2>Pushes the element to either the left or right side.</h2>
         </header>
 
-        <section>
-            <h3>Float Left</h3>
+        <br>
 
-            <!-- Cada imagen en su propio contenedor con overflow:hidden -->
+        <!-- CONTENEDOR 1: Float Left -->
+        <div class="caja-negra-individual">
+            <h3>Float Left</h3>
             <div class="float-container">
                 <img class="float_left" src="../src/img/mario.jpg" alt="Mario">
                 <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -69,18 +78,13 @@
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus blanditiis consectetur maxime dolore dolor exercitationem, error adipisci odio eum incidunt delectus totam, facilis voluptates dignissimos culpa architecto, dolores possimus quaerat.
                     Nesciunt consequatur obcaecati nobis adipisci aliquid dignissimos recusandae asperiores atque temporibus similique dolor cum reiciendis praesentium placeat fugit ut architecto rem quas dicta nihil, expedita itaque. Sapiente ab corrupti reiciendis.
                     Magnam voluptate eaque sunt. Repudiandae asperiores similique perspiciatis eos et necessitatibus consectetur unde. Facilis odit dolorem aliquid architecto eum aliquam, consequatur ut ad dolores nisi eaque blanditiis quo iure illum.
-                    Molestias, sapiente quae? Incidunt, error, quas tenetur, sunt officia quaerat esse libero ipsam corrupti ducimus dolore! Tempora delectus quia labore, voluptatum molestias nesciunt non nobis accusamus quasi architecto. Totam, nam.
-                    Excepturi reprehenderit inventore impedit sunt laudantium quibusdam delectus repellat, eveniet rerum porro labore magnam eius obcaecati saepe! Doloremque, similique quas porro laudantium maxime aperiam aliquam, magnam corrupti sapiente, corporis facilis!
-                    Necessitatibus, nobis magnam. Possimus ipsum corrupti a! Officia libero voluptates dolorum incidunt debitis a obcaecati, illum assumenda ducimus odio beatae quibusdam veritatis explicabo voluptatum optio, nam eveniet quasi odit. Deleniti?
-                    Obcaecati cupiditate incidunt cumque, odio earum unde ad voluptas nisi doloribus non enim. Explicabo quisquam, nisi error laudantium ab accusamus pariatur corrupti saepe maiores illum tenetur molestias rem dolores ducimus.
-                    Quos, veritatis nemo! Aperiam dolore, sint nulla cumque autem reiciendis sequi laborum vitae officiis nisi impedit, repellendus pariatur, quas numquam harum accusamus nobis. Illum facere minima iusto doloribus officia natus.
-                    Aliquid impedit dolor quisquam vel ea, quae culpa neque repellat nostrum eos minima sequi officiis id ut mollitia similique quos magni vitae illum sit! Architecto, totam. Voluptas minima vitae officiis?
-                    Ullam, repellendus. Minima, possimus suscipit numquam mollitia magni quaerat. Nostrum cum sapiente molestias officia aliquid doloribus, velit possimus accusamus vel, laboriosam magni eaque, esse iusto deserunt vitae illum corporis tempora?
-                    Sunt soluta ab nihil aperiam rerum ex nobis doloribus iusto repellat! Corrupti numquam, fuga qui quam eveniet quidem explicabo in eum voluptatem? Accusamus fugit nobis id, iusto reiciendis repellendus iste?
-                    
                 </p>
             </div>
+        </div>
 
+        <!-- CONTENEDOR 2: Float Right -->
+        <div class="caja-negra-individual">
+            <h3>Float Right</h3>
             <div class="float-container">
                 <img class="float_right" src="../src/img/luigi.jpeg" alt="Luigi">
                 <p>
@@ -93,23 +97,9 @@
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus blanditiis consectetur maxime dolore dolor exercitationem, error adipisci odio eum incidunt delectus totam, facilis voluptates dignissimos culpa architecto, dolores possimus quaerat.
                     Nesciunt consequatur obcaecati nobis adipisci aliquid dignissimos recusandae asperiores atque temporibus similique dolor cum reiciendis praesentium placeat fugit ut architecto rem quas dicta nihil, expedita itaque. Sapiente ab corrupti reiciendis.
                     Magnam voluptate eaque sunt. Repudiandae asperiores similique perspiciatis eos et necessitatibus consectetur unde. Facilis odit dolorem aliquid architecto eum aliquam, consequatur ut ad dolores nisi eaque blanditiis quo iure illum.
-                    Molestias, sapiente quae? Incidunt, error, quas tenetur, sunt officia quaerat esse libero ipsam corrupti ducimus dolore! Tempora delectus quia labore, voluptatum molestias nesciunt non nobis accusamus quasi architecto. Totam, nam.
-                    Excepturi reprehenderit inventore impedit sunt laudantium quibusdam delectus repellat, eveniet rerum porro labore magnam eius obcaecati saepe! Doloremque, similique quas porro laudantium maxime aperiam aliquam, magnam corrupti sapiente, corporis facilis!
-                    Necessitatibus, nobis magnam. Possimus ipsum corrupti a! Officia libero voluptates dolorum incidunt debitis a obcaecati, illum assumenda ducimus odio beatae quibusdam veritatis explicabo voluptatum optio, nam eveniet quasi odit. Deleniti?
-                    Obcaecati cupiditate incidunt cumque, odio earum unde ad voluptas nisi doloribus non enim. Explicabo quisquam, nisi error laudantium ab accusamus pariatur corrupti saepe maiores illum tenetur molestias rem dolores ducimus.
-                    Quos, veritatis nemo! Aperiam dolore, sint nulla cumque autem reiciendis sequi laborum vitae officiis nisi impedit, repellendus pariatur, quas numquam harum accusamus nobis. Illum facere minima iusto doloribus officia natus.
-                    Aliquid impedit dolor quisquam vel ea, quae culpa neque repellat nostrum eos minima sequi officiis id ut mollitia similique quos magni vitae illum sit! Architecto, totam. Voluptas minima vitae officiis?
-                    Ullam, repellendus. Minima, possimus suscipit numquam mollitia magni quaerat. Nostrum cum sapiente molestias officia aliquid doloribus, velit possimus accusamus vel, laboriosam magni eaque, esse iusto deserunt vitae illum corporis tempora?
-                    Sunt soluta ab nihil aperiam rerum ex nobis doloribus iusto repellat! Corrupti numquam, fuga qui quam eveniet quidem explicabo in eum voluptatem? Accusamus fugit nobis id, iusto reiciendis repellendus iste?
-                    Temporibus quia consequuntur nostrum libero non. Aut amet itaque et labore explicabo ratione ab perferendis, aperiam ut ipsam eius enim consequatur cumque iure tenetur, non possimus sequi, inventore vel sapiente.
-                    
-
-                </p>
             </div>
-
-        </section>
+        </div>
     </main>
-
 </body>
 
 </html>

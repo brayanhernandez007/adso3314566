@@ -6,234 +6,224 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>11 - Forms</title>
     <link rel="stylesheet" href="../src/css/html.css">
+    <style>
+
+        .caja-negra-individual{
+            font-family: "Roboto Slab", serif;
+        }
+
+        .caja-negra-individual form {
+            background-color: #1a1a1a;
+            width: 100%;
+            max-width: 340px;
+            margin: 0 auto;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .caja-negra-individual h2 {
+            text-align: center;
+            color: #ff902f;
+            margin-bottom: 20px;
+        }
+
+        .campo {
+            position: relative;
+            margin-top: 20px;
+        }
+
+        .caja-negra-individual input:not([type="radio"]):not([type="checkbox"]):not([type="range"]):not([type="color"]),
+        .caja-negra-individual select,
+        .caja-negra-individual textarea {
+            width: 93%;
+            padding: 10px;
+            border: 1px solid #555;
+            border-radius: 6px;
+            outline: none;
+            background: #2a2a2a;
+            color: white;
+        }
+
+        .campo label {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            color: #aaa;
+            background: #1a1a1a;
+            padding: 0 5px;
+            transition: 0.3s;
+        }
+
+        .campo input:focus+label,
+        .campo input:valid+label {
+            top: -10px;
+            font-size: 12px;
+            color: #ff902f;
+        }
+
+        .caja-negra-individual button {
+            width: 100%;
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #ff902f;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            font-family: "Roboto Slab", serif;
+        }
+
+        .caja-negra-individual button:hover {
+            background-color: #ff5e00;
+        }
+
+        .pregunta {
+            margin-top: 15px;
+            font-weight: bold;
+            color: #ff902f;
+        }
+
+        .opcion {
+            display: block;
+            margin-bottom: 5px;
+            color: #ddd;
+        }
+
+        .caja-negra-individual input[type="radio"],
+        .caja-negra-individual input[type="checkbox"] {
+            width: auto;
+            margin-right: 5px;
+            accent-color: #ff902f;
+            transform: scale(1.2);
+            cursor: pointer;
+        }
+
+        .caja-negra-individual input[type="color"] {
+            width: 100%;
+            height: 40px;
+            padding: 3px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .caja-negra-individual progress {
+            width: 100%;
+            height: 10px;
+            border-radius: 5px;
+        }
+        
+        .caja-negra-individual progress::-webkit-progress-bar {
+            background-color: #333;
+            border-radius: 5px;
+        }
+        
+        .caja-negra-individual progress::-webkit-progress-value {
+            background-color: #ff902f;
+            border-radius: 5px;
+        }
+    </style>
 </head>
-<style>
-    body {
-        background-color: #ff902f;
-        font-family: "Roboto Slab", serif;
-    }
-
-    form {
-        background-color: white;
-        width: 340px;
-        margin: 60px auto;
-        padding: 25px;
-        border-radius: 15px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    h2 {
-        text-align: center;
-        color: #ff902f;
-    }
-
-    .campo {
-        position: relative;
-        margin-top: 20px;
-    }
-
-    /* INPUTS PRINCIPALES */
-    input {
-        width: 93%;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 6px;
-        outline: none;
-    }
-
-    /* LABEL ANIMADO */
-    .campo label {
-        position: absolute;
-        left: 10px;
-        top: 10px;
-        color: gray;
-        background: white;
-        padding: 0 5px;
-        transition: 0.3s;
-    }
-
-    .campo input:focus+label,
-    .campo input:valid+label {
-        top: -10px;
-        font-size: 12px;
-        color: #ff902f;
-    }
-
-    /* BOTONES */
-    button {
-        width: 100%;
-        margin-top: 10px;
-        padding: 10px;
-        background-color: #ff902f;
-        color: white;
-        border: none;
-        border-radius: 6px;
-    }
-
-    /* OTROS INPUTS */
-    select,
-    textarea,
-    input[type="range"],
-    input[type="date"],
-    input[type="time"],
-    input[type="week"],
-    input[type="month"],
-    input[type="file"],
-    input[type="search"],
-    progress {
-        width: 100%;
-        margin-top: 5px;
-        margin-bottom: 10px;
-    }
-
-    /* 🔥 INPUT COLOR MEJORADO */
-    input[type="color"] {
-        width: 100%;
-        height: 40px;
-        padding: 3px;
-        border: none;
-        cursor: pointer;
-    }
-
-    /* mejora visual del color */
-    input[type="color"]::-webkit-color-swatch {
-        border-radius: 6px;
-        border: none;
-    }
-
-    input[type="color"]::-webkit-color-swatch-wrapper {
-        padding: 0;
-    }
-
-    /* PREGUNTAS */
-    .pregunta {
-        margin-top: 15px;
-        font-weight: bold;
-        color: #444;
-    }
-
-    /* RADIO Y CHECKBOX */
-    .opcion {
-        display: block;
-        margin-bottom: 5px;
-        color: #333;
-    }
-
-    /* 🔥 HACER VISIBLES LOS INPUTS */
-    input[type="radio"],
-    input[type="checkbox"] {
-        width: auto;
-        margin-right: 5px;
-        accent-color: #ff902f;
-        /* 🔥 color visible */
-        transform: scale(1.2);
-        cursor: pointer;
-    }
-</style>
 
 <body>
     <main>
         <div class="contenedor-botones">
-
             <a href="../02-html/index2.html" class="boton">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#000" viewBox="0 0 256 256">
-                    <path
-                        d="M232,56A104.11,104.11,0,0,1,128,160H51.31l34.35,34.34a8,8,0,0,1-11.32,11.32l-48-48a8,8,0,0,1,0-11.32l48-48a8,8,0,0,1,11.32,11.32L51.31,144H128a88.1,88.1,0,0,0,88-88,8,8,0,0,1,16,0Z">
-                    </path>
+                    <path d="M232,56A104.11,104.11,0,0,1,128,160H51.31l34.35,34.34a8,8,0,0,1-11.32,11.32l-48-48a8,8,0,0,1,0-11.32l48-48a8,8,0,0,1,11.32,11.32L51.31,144H128a88.1,88.1,0,0,0,88-88,8,8,0,0,1,16,0Z"></path>
                 </svg>
             </a>
-
             <a href="../index.html" class="boton">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
-                    <path
-                        d="M219.31,108.68l-80-80a16,16,0,0,0-22.62,0l-80,80A15.87,15.87,0,0,0,32,120v96a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V160h32v56a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V120A15.87,15.87,0,0,0,219.31,108.68ZM208,208H160V152a8,8,0,0,0-8-8H104a8,8,0,0,0-8,8v56H48V120l80-80,80,80Z">
-                    </path>
+                    <path d="M219.31,108.68l-80-80a16,16,0,0,0-22.62,0l-80,80A15.87,15.87,0,0,0,32,120v96a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V160h32v56a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V120A15.87,15.87,0,0,0,219.31,108.68ZM208,208H160V152a8,8,0,0,0-8-8H104a8,8,0,0,0-8,8v56H48V120l80-80,80,80Z"></path>
                 </svg>
             </a>
         </div>
+        <br><br>
+
+        <header>
+            <h1>11 - Forms</h1>
+            <h2>Crea formularios interactivos para entradas de usuario.</h2>
+        </header>
+
         <br>
-        <br>
-        <main>
-            <header>
-                <h1>11 - Forms</h1>
-                <h2>Crea formularios interactivos para entradas de usuario.</h2>
-            </header>
-            <section>
-                <form>
-                    <h2>Formulario</h2>
+        
+        <div class="caja-negra-individual">
+            <form>
+                <h2>Formulario</h2>
 
-                    <div class="campo">
-                        <input type="text" required>
-                        <label>Escriba su nombre</label>
-                    </div>
+                <div class="campo">
+                    <input type="text" required>
+                    <label>Escriba su nombre</label>
+                </div>
 
-                    <div class="campo">
-                        <input type="email" required>
-                        <label>Ingrese su correo</label>
-                    </div>
+                <div class="campo">
+                    <input type="email" required>
+                    <label>Ingrese su correo</label>
+                </div>
 
-                    <div class="campo">
-                        <input type="password" required>
-                        <label>Cree una contraseña</label>
-                    </div>
+                <div class="campo">
+                    <input type="password" required>
+                    <label>Cree una contraseña</label>
+                </div>
 
-                    <div class="campo">
-                        <input type="number" required>
-                        <label>¿Cuál es su edad?</label>
-                    </div>
+                <div class="campo">
+                    <input type="number" required>
+                    <label>¿Cuál es su edad?</label>
+                </div>
 
-                    <p class="pregunta">¿Qué nivel deseas seleccionar?</p>
-                    <input type="range">
+                <p class="pregunta">¿Qué nivel deseas seleccionar?</p>
+                <input type="range">
 
-                    <p class="pregunta">¿Cuál es su color favorito?</p>
-                    <input type="color">
+                <p class="pregunta">¿Cuál es su color favorito?</p>
+                <input type="color">
 
-                    <p class="pregunta">Seleccione su fecha de nacimiento</p>
-                    <input type="date">
+                <p class="pregunta">Seleccione su fecha de nacimiento</p>
+                <input type="date">
 
-                    <p class="pregunta">Seleccione una hora</p>
-                    <input type="time">
+                <p class="pregunta">Seleccione una hora</p>
+                <input type="time">
 
-                    <p class="pregunta">Seleccione una semana</p>
-                    <input type="week">
+                <p class="pregunta">Seleccione una semana</p>
+                <input type="week">
 
-                    <p class="pregunta">Seleccione un mes</p>
-                    <input type="month">
+                <p class="pregunta">Seleccione un mes</p>
+                <input type="month">
 
-                    <p class="pregunta">¿Qué desea buscar?</p>
-                    <input type="search" placeholder="Buscar...">
+                <p class="pregunta">¿Qué desea buscar?</p>
+                <input type="search" placeholder="Buscar...">
 
-                    <p class="pregunta">Suba un archivo</p>
-                    <input type="file">
+                <p class="pregunta">Suba un archivo</p>
+                <input type="file">
 
-                    <p class="pregunta">Seleccione su género</p>
-                    <label class="opcion"><input type="radio" name="genero"> Masculino</label>
-                    <label class="opcion"><input type="radio" name="genero"> Femenino</label>
+                <p class="pregunta">Seleccione su género</p>
+                <label class="opcion"><input type="radio" name="genero"> Masculino</label>
+                <label class="opcion"><input type="radio" name="genero"> Femenino</label>
 
-                    <p class="pregunta">Seleccione sus intereses</p>
-                    <label class="opcion"><input type="checkbox"> Programación</label>
-                    <label class="opcion"><input type="checkbox"> Diseño</label>
+                <p class="pregunta">Seleccione sus intereses</p>
+                <label class="opcion"><input type="checkbox"> Programación</label>
+                <label class="opcion"><input type="checkbox"> Diseño</label>
 
-                    <p class="pregunta">Seleccione su ciudad</p>
-                    <select>
-                        <option>Bogotá</option>
-                        <option>Medellín</option>
-                        <option>Cali</option>
-                    </select>
+                <p class="pregunta">Seleccione su ciudad</p>
+                <select>
+                    <option>Bogotá</option>
+                    <option>Medellín</option>
+                    <option>Cali</option>
+                </select>
 
-                    <p class="pregunta">Escriba un mensaje</p>
-                    <textarea rows="3"></textarea>
+                <p class="pregunta">Escriba un mensaje</p>
+                <textarea rows="3"></textarea>
 
-                    <p class="pregunta">Nivel de progreso</p>
-                    <progress value="50" max="100"></progress>
+                <p class="pregunta">Nivel de progreso</p>
+                <progress value="50" max="100"></progress>
 
-                    <button type="button">Botón</button>
-                    <button type="submit">Enviar</button>
-                    <button type="reset">Limpiar</button>
-                </form>
-            </section>
-        </main>
-
+                <button type="button">Botón</button>
+                <button type="submit">Enviar</button>
+                <button type="reset">Limpiar</button>
+            </form>
+        </div>
+    </main>
 </body>
 
 </html>

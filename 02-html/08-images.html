@@ -6,43 +6,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>08 - Images</title>
     <link rel="stylesheet" href="../src/css/html.css">
+    <style>
+        @keyframes flotar {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .caja-negra-individual {
+            text-align: center;
+        }
+        
+        .caja-negra-individual h3 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .caja-negra-individual img {
+            max-width: 100%;
+            border-radius: 15px;
+            margin: 10px 0;
+            border: 3px solid #ff902f;
+            animation: flotar 3s ease-in-out infinite;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .caja-negra-individual img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(255, 144, 47, 0.3);
+            animation: none;
+        }
+        
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    </style>
 </head>
 
 <body>
     <main>
         <div class="contenedor-botones">
-
             <a href="../02-html/index2.html" class="boton">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#000" viewBox="0 0 256 256">
-                    <path
-                        d="M232,56A104.11,104.11,0,0,1,128,160H51.31l34.35,34.34a8,8,0,0,1-11.32,11.32l-48-48a8,8,0,0,1,0-11.32l48-48a8,8,0,0,1,11.32,11.32L51.31,144H128a88.1,88.1,0,0,0,88-88,8,8,0,0,1,16,0Z">
-                    </path>
+                    <path d="M232,56A104.11,104.11,0,0,1,128,160H51.31l34.35,34.34a8,8,0,0,1-11.32,11.32l-48-48a8,8,0,0,1,0-11.32l48-48a8,8,0,0,1,11.32,11.32L51.31,144H128a88.1,88.1,0,0,0,88-88,8,8,0,0,1,16,0Z"></path>
                 </svg>
             </a>
-
             <a href="../index.html" class="boton">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
-                    <path
-                        d="M219.31,108.68l-80-80a16,16,0,0,0-22.62,0l-80,80A15.87,15.87,0,0,0,32,120v96a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V160h32v56a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V120A15.87,15.87,0,0,0,219.31,108.68ZM208,208H160V152a8,8,0,0,0-8-8H104a8,8,0,0,0-8,8v56H48V120l80-80,80,80Z">
-                    </path>
+                    <path d="M219.31,108.68l-80-80a16,16,0,0,0-22.62,0l-80,80A15.87,15.87,0,0,0,32,120v96a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V160h32v56a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V120A15.87,15.87,0,0,0,219.31,108.68ZM208,208H160V152a8,8,0,0,0-8-8H104a8,8,0,0,0-8,8v56H48V120l80-80,80,80Z"></path>
                 </svg>
             </a>
         </div>
-        <br>
-        <br>
-        <main>
-            <header>
-                <h1>08 - Images</h1>
-                <h2>Inserta una imagen.</h2>
-            </header>
-            <section>
-                <h3>Relative Path:</h3>
-                <img src="../src/img/chetos.jpg" alt="Tigre Cheetos">
-                <h3>Absolute Path:</h3>
-                <img src="https://surl.li/uidydj" alt="hola">
-            </section>
-        </main>
+        <br><br>
 
+        <header>
+            <h1>08 - Images</h1>
+            <h2>Inserta una imagen.</h2>
+        </header>
+
+        <!-- CONTENEDOR 1: Relative Path -->
+        <div class="caja-negra-individual">
+            <h3>Relative Path</h3>
+            <div class="image-container">
+                <img src="../src/img/chetos.jpg" alt="Tigre Cheetos">
+            </div>
+        </div>
+
+        <!-- CONTENEDOR 2: Absolute Path -->
+        <div class="caja-negra-individual">
+            <h3>Absolute Path</h3>
+            <div class="image-container">
+                <img src="https://surl.li/uidydj" alt="Imagen">
+            </div>
+        </div>
+    </main>
 </body>
 
 </html>

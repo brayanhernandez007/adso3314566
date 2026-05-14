@@ -60,8 +60,6 @@
 
         .overflow-visible { overflow: visible; }
         .overflow-hidden  { overflow: hidden; }
-        /* ✅ FIX: overflow-y: scroll en lugar de overflow: scroll
-           para evitar el scrollbar horizontal innecesario */
         .overflow-scroll  { overflow-y: scroll; }
 
         /* ══ Z-INDEX ══ */
@@ -116,78 +114,71 @@
             </h2>
         </header>
 
-        <section>
-
-            <!-- 1. Display: none  vs  visibility: hidden -->
-            <section>
-                <h3>Display / Visibility</h3>
-                <div class="display-wrap">
-
-                    <div>
-                        <p>Display</p>
-                        <div class="num-grid display-none-5">
-                            <div class="num-box">1</div>
-                            <div class="num-box">2</div>
-                            <div class="num-box">3</div>
-                            <div class="num-box">4</div>
-                            <div class="num-box">5</div>
-                            <div class="num-box">6</div>
-                            <div class="num-box">7</div>
-                            <div class="num-box">8</div>
-                            <div class="num-box">9</div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <p>Visibility</p>
-                        <div class="num-grid visibility-hidden-5">
-                            <div class="num-box">1</div>
-                            <div class="num-box">2</div>
-                            <div class="num-box">3</div>
-                            <div class="num-box">4</div>
-                            <div class="num-box">5</div>
-                            <div class="num-box">6</div>
-                            <div class="num-box">7</div>
-                            <div class="num-box">8</div>
-                            <div class="num-box">9</div>
-                        </div>
-                    </div>
-
-                </div>
-            </section>
-
-            <!-- 2. Overflow -->
-            <section>
-                <h3>Overflow</h3>
-                <br>
-                <div class="overflow-wrap">
-                    <div class="overflow-box overflow-visible">
-                        <b>overflow: visible</b>
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cras vitae dolor eu enim dignissim lacinia. Maecenas blandit. Morbi mi.
-                    </div>
-                    <div class="overflow-box overflow-hidden">
-                        <b>overflow: hidden</b>
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cras vitae dolor eu enim dignissim lacinia. Maecenas blandit. Morbi mi.
-                    </div>
-                    <div class="overflow-box overflow-scroll">
-                        <b>overflow: scroll</b>
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cras vitae dolor eu enim dignissim lacinia. Maecenas blandit. Morbi mi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cras vitae dolor eu enim dignissim lacinia. Maecenas blandit. Morbi mi.
+        <!-- SECCIÓN 1: DISPLAY / VISIBILITY -->
+        <div class="caja-negra-individual">
+            <h3>Display / Visibility</h3>
+            <div class="display-wrap">
+                <div>
+                    <p>Display</p>
+                    <div class="num-grid display-none-5">
+                        <div class="num-box">1</div>
+                        <div class="num-box">2</div>
+                        <div class="num-box">3</div>
+                        <div class="num-box">4</div>
+                        <div class="num-box">5</div>
+                        <div class="num-box">6</div>
+                        <div class="num-box">7</div>
+                        <div class="num-box">8</div>
+                        <div class="num-box">9</div>
                     </div>
                 </div>
-            </section>
-            
-            <!-- 3. Z-Index -->
-            <section>
-                <h3>Z-Index</h3>
-                <br>
-                <div class="z-wrap">
-                    <div class="z-box z1">1</div>
-                    <div class="z-box z2">2</div>
-                    <div class="z-box z3">3</div>
-                </div>
-            </section>
 
-        </section>
+                <div>
+                    <p>Visibility</p>
+                    <div class="num-grid visibility-hidden-5">
+                        <div class="num-box">1</div>
+                        <div class="num-box">2</div>
+                        <div class="num-box">3</div>
+                        <div class="num-box">4</div>
+                        <div class="num-box">5</div>
+                        <div class="num-box">6</div>
+                        <div class="num-box">7</div>
+                        <div class="num-box">8</div>
+                        <div class="num-box">9</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN 2: OVERFLOW -->
+        <div class="caja-negra-individual">
+            <h3>Overflow</h3>
+            <div class="overflow-wrap">
+                <div class="overflow-box overflow-visible">
+                    <b>overflow: visible</b>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cras vitae dolor eu enim dignissim lacinia. Maecenas blandit. Morbi mi.
+                </div>
+                <div class="overflow-box overflow-hidden">
+                    <b>overflow: hidden</b>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cras vitae dolor eu enim dignissim lacinia. Maecenas blandit. Morbi mi.
+                </div>
+                <div class="overflow-box overflow-scroll">
+                    <b>overflow: scroll</b>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cras vitae dolor eu enim dignissim lacinia. Maecenas blandit. Morbi mi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cras vitae dolor eu enim dignissim lacinia. Maecenas blandit. Morbi mi.
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN 3: Z-INDEX -->
+        <div class="caja-negra-individual">
+            <h3>Z-Index</h3>
+            <div class="z-wrap">
+                <div class="z-box z1">1</div>
+                <div class="z-box z2">2</div>
+                <div class="z-box z3">3</div>
+            </div>
+        </div>
+
     </main>
 </body>
 

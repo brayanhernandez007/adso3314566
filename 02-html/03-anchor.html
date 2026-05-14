@@ -7,14 +7,50 @@
     <title>03 - Anchor</title>
     <link rel="stylesheet" href="../src/css/html.css">
     <style>
+        /* Scroll suave para toda la página */
         html {
             scroll-behavior: smooth;
         }
 
-        section {
-            a:is(:link, :visited) {
-                color: #ff902f;
-            }
+        a {
+            font-family: "Roboto Slab", serif;
+        }
+
+        .caja-negra-individual a:is(:link, :visited) {
+            color: #ff902f;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .caja-negra-individual a:hover {
+            color: #ffaa33;
+            text-decoration: underline;
+        }
+
+        /* Contenedor con scroll interno */
+        .scroll-content {
+            text-align: justify;
+            max-height: 300px;
+            overflow-y: auto;
+            padding: 15px;
+            background: #111;
+            border-radius: 10px;
+            margin: 15px 0;
+            scroll-behavior: smooth;
+        }
+
+        .scroll-content p {
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .anchor-links {
+            margin: 15px 0;
+        }
+        
+        /* Puntos de anclaje dentro del contenedor con scroll */
+        .anchor-point {
+            scroll-margin-top: 20px;
         }
     </style>
 </head>
@@ -22,42 +58,39 @@
 <body>
     <main>
         <div class="contenedor-botones">
-
             <a href="../02-html/index2.html" class="boton">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#000" viewBox="0 0 256 256">
-                    <path
-                        d="M232,56A104.11,104.11,0,0,1,128,160H51.31l34.35,34.34a8,8,0,0,1-11.32,11.32l-48-48a8,8,0,0,1,0-11.32l48-48a8,8,0,0,1,11.32,11.32L51.31,144H128a88.1,88.1,0,0,0,88-88,8,8,0,0,1,16,0Z">
-                    </path>
+                    <path d="M232,56A104.11,104.11,0,0,1,128,160H51.31l34.35,34.34a8,8,0,0,1-11.32,11.32l-48-48a8,8,0,0,1,0-11.32l48-48a8,8,0,0,1,11.32,11.32L51.31,144H128a88.1,88.1,0,0,0,88-88,8,8,0,0,1,16,0Z"></path>
                 </svg>
             </a>
-
             <a href="../index.html" class="boton">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
-                    <path
-                        d="M219.31,108.68l-80-80a16,16,0,0,0-22.62,0l-80,80A15.87,15.87,0,0,0,32,120v96a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V160h32v56a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V120A15.87,15.87,0,0,0,219.31,108.68ZM208,208H160V152a8,8,0,0,0-8-8H104a8,8,0,0,0-8,8v56H48V120l80-80,80,80Z">
-                    </path>
+                    <path d="M219.31,108.68l-80-80a16,16,0,0,0-22.62,0l-80,80A15.87,15.87,0,0,0,32,120v96a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V160h32v56a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V120A15.87,15.87,0,0,0,219.31,108.68ZM208,208H160V152a8,8,0,0,0-8-8H104a8,8,0,0,0-8,8v56H48V120l80-80,80,80Z"></path>
                 </svg>
             </a>
         </div>
-        <br>
-        <br>
-        <main>
-            <header>
-                <a name="top"></a>
-                <h1>03 - Anchor</h1>
-                <h2>Enlaza a otras páginas o recursos.</h2>
-            </header>
-            <section>
-                <h3>Links to webpages:</h3>
-                <a href="https://www.google.com" target="_blank">Google</a> &nbsp; | &nbsp;
-                <a href="https://www.youtube.com" target="_blank">Youtube</a> &nbsp; | &nbsp;
-                <a href="https://www.instagram.com" target="_blank">Instagram</a>
-                <br><br>
-                <h3>Anchor to a section of page:</h3>
-                <a name="top"></a>
-                <br>
-                <a href="#bottom">Go to bottom of page</a>
-                <br>
+        <br><br>
+
+        <header>
+            <h1>03 - Anchor</h1>
+            <h2>Enlaza a otras páginas o recursos.</h2>
+        </header>
+
+        <div class="caja-negra-individual">
+            <h3>Links to webpages:</h3>
+            <a href="https://www.google.com" target="_blank">Google</a> &nbsp; | &nbsp;
+            <a href="https://www.youtube.com" target="_blank">Youtube</a> &nbsp; | &nbsp;
+            <a href="https://www.instagram.com" target="_blank">Instagram</a>
+        </div>
+
+        <div class="caja-negra-individual">
+            <h3>Anchor to a section of page:</h3>
+            <div class="anchor-links">
+                <a href="#bottom" onclick="scrollToBottom()">⬇ Go to bottom of page ⬇</a>
+            </div>
+            
+            <div class="scroll-content" id="scrollContainer">
+                <div id="topAnchor" class="anchor-point"></div>
                 <p>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium ipsum provident, reprehenderit
                     eaque expedita, voluptatum placeat eum sapiente cupiditate laborum ad, unde voluptatibus saepe
@@ -93,31 +126,40 @@
                     corrupti suscipit quam recusandae quos quisquam? Officiis voluptatem eligendi eum, illum pariatur
                     porro!
                 </p>
-                <h3>Bottom Page</h3>
-                <a name="bottom"></a>
-                <br>
-                <a href="#top">Go to top of page</a>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus unde eaque id, repellat aperiam
-                    excepturi officiis vero quas deleniti totam expedita cupiditate, ullam dolore dolores ipsa. Eos
-                    eaque obcaecati illum, nobis magni quod, cupiditate suscipit dolores at ea architecto? Deserunt,
-                    ipsum nisi maiores animi consequatur ullam, eum dolor fuga beatae vel, quidem magnam ab cupiditate
-                    tempora sunt saepe odio optio! Soluta reiciendis, ipsam possimus ipsa laboriosam repellat quis
-                    aspernatur incidunt error placeat eius vel cumque aliquam totam dolor itaque est rerum esse sequi
-                    nemo, pariatur corporis deleniti. Itaque dolorum excepturi labore quo pariatur fuga, ducimus aliquam
-                    quam perspiciatis! Beatae optio dicta vitae sit pariatur corporis ullam? Modi placeat quibusdam,
-                    debitis praesentium quaerat repudiandae distinctio exercitationem reiciendis soluta eveniet
-                    accusamus dolorem aperiam. Iure magni ex nesciunt in esse et repudiandae quo explicabo tenetur
-                    soluta, inventore vel dolores exercitationem nobis, autem deleniti placeat, velit fugit eveniet?
-                    Deleniti voluptates quisquam error voluptatum magnam eaque, maiores distinctio repudiandae beatae
-                    quibusdam modi rem omnis exercitationem est ex voluptas, sapiente veritatis quidem doloremque
-                    debitis iure in vel. Facilis inventore ex modi placeat minus eaque, explicabo neque voluptatibus
-                    iure mollitia deleniti nihil fugiat, qui exercitationem aspernatur possimus dignissimos earum hic
-                    atque? Neque minima iure corporis vero ad.
-                </p>
-            </section>
-        </main>
+                <div id="bottomAnchor" class="anchor-point"></div>
+            </div>
+            
+            <div class="anchor-links">
+                <a href="#top" onclick="scrollToTop()">⬆ Go to top of page ⬆</a>
+            </div>
+        </div>
+    </main>
 
+    <script>
+        function scrollToBottom() {
+            const container = document.getElementById('scrollContainer');
+            const bottomAnchor = document.getElementById('bottomAnchor');
+            if (container && bottomAnchor) {
+                container.scrollTo({
+                    top: bottomAnchor.offsetTop - 20,
+                    behavior: 'smooth'
+                });
+            }
+            return false;
+        }
+
+        function scrollToTop() {
+            const container = document.getElementById('scrollContainer');
+            const topAnchor = document.getElementById('topAnchor');
+            if (container && topAnchor) {
+                container.scrollTo({
+                    top: topAnchor.offsetTop - 20,
+                    behavior: 'smooth'
+                });
+            }
+            return false;
+        }
+    </script>
 </body>
 
 </html>

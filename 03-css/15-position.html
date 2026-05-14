@@ -11,79 +11,63 @@
             width: 400px;
             height: 300px;
             background: #c79ad9;
-
-            margin: 4rem auto;
-
+            margin: 1rem auto;
             position: relative;
         }
 
         .caja {
             width: 150px;
             height: 150px;
-
             background: #6d5575;
             color: white;
-
             display: flex;
             justify-content: center;
             align-items: center;
-
             font-size: 30px;
         }
 
         .static {
             position: static;
-
         }
 
         .relative {
             position: relative;
-
             left: 100px;
             top: 50px;
         }
 
         .absolute {
             position: absolute;
-
             right: 20px;
             bottom: 20px;
         }
 
         .fixed {
             position: fixed;
-
             right: 20px;
             top: 20px;
         }
 
+        /* Para que el fixed no se salga del contenedor visualmente, se mantiene igual */
         .sticky-contenedor {
             width: 400px;
             height: 300px;
-
             background: #c79ad9;
-
-            margin: 4rem auto;
-
+            margin: 1rem auto;
             overflow-y: auto;
         }
 
         .sticky {
             position: sticky;
             top: 0;
-
             width: 100%;
             height: 70px;
-
             background: #6d5575;
             color: white;
-
             display: flex;
             justify-content: center;
             align-items: center;
-
             font-size: 30px;
-
             z-index: 10;
         }
 
@@ -97,88 +81,93 @@
 <body>
     <main>
         <div class="contenedor-botones">
-
             <a href="../03-css/index3.html" class="boton">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#000" viewBox="0 0 256 256">
-                    <path
-                        d="M232,56A104.11,104.11,0,0,1,128,160H51.31l34.35,34.34a8,8,0,0,1-11.32,11.32l-48-48a8,8,0,0,1,0-11.32l48-48a8,8,0,0,1,11.32,11.32L51.31,144H128a88.1,88.1,0,0,0,88-88,8,8,0,0,1,16,0Z">
-                    </path>
+                    <path d="M232,56A104.11,104.11,0,0,1,128,160H51.31l34.35,34.34a8,8,0,0,1-11.32,11.32l-48-48a8,8,0,0,1,0-11.32l48-48a8,8,0,0,1,11.32,11.32L51.31,144H128a88.1,88.1,0,0,0,88-88,8,8,0,0,1,16,0Z"></path>
                 </svg>
             </a>
-
             <a href="../index.html" class="boton">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
-                    <path
-                        d="M219.31,108.68l-80-80a16,16,0,0,0-22.62,0l-80,80A15.87,15.87,0,0,0,32,120v96a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V160h32v56a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V120A15.87,15.87,0,0,0,219.31,108.68ZM208,208H160V152a8,8,0,0,0-8-8H104a8,8,0,0,0-8,8v56H48V120l80-80,80,80Z">
-                    </path>
+                    <path d="M219.31,108.68l-80-80a16,16,0,0,0-22.62,0l-80,80A15.87,15.87,0,0,0,32,120v96a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V160h32v56a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V120A15.87,15.87,0,0,0,219.31,108.68ZM208,208H160V152a8,8,0,0,0-8-8H104a8,8,0,0,0-8,8v56H48V120l80-80,80,80Z"></path>
                 </svg>
             </a>
         </div>
-        <br>
-        <br>
-        <main>
-            <header>
-                <h1>15 - Position</h1>
-                <h2>- Normal/Static <br>
-                    - Relative <br>
-                    - Absolute <br>
-                    - Fixed <br>
-                    - Sticky</h2>
-            </header>
-            <section>
-                <h3>Normal/Static</h3>
-                <div class="contenedor">
-                    <div class="caja static">
-                        Normal
-                    </div>
+        <br><br>
+
+        <header>
+            <h1>15 - Position</h1>
+            <h2>- Normal/Static <br>
+                - Relative <br>
+                - Absolute <br>
+                - Fixed <br>
+                - Sticky</h2>
+        </header>
+
+        <!-- CONTENEDOR 1: Normal/Static -->
+        <div class="caja-negra-individual">
+            <h3>Normal/Static</h3>
+            <div class="contenedor">
+                <div class="caja static">
+                    Normal
                 </div>
-                <h3>Relative</h3>
-                <div class="contenedor">
-                    <div class="caja relative">
-                        Relative
-                    </div>
+            </div>
+        </div>
+
+        <!-- CONTENEDOR 2: Relative -->
+        <div class="caja-negra-individual">
+            <h3>Relative</h3>
+            <div class="contenedor">
+                <div class="caja relative">
+                    Relative
                 </div>
-                <h3>Absolute</h3>
-                <div class="contenedor">
-                    <div class="caja absolute">
-                        Absolute
-                    </div>
+            </div>
+        </div>
+
+        <!-- CONTENEDOR 3: Absolute -->
+        <div class="caja-negra-individual">
+            <h3>Absolute</h3>
+            <div class="contenedor">
+                <div class="caja absolute">
+                    Absolute
                 </div>
-                <h3>Fixed</h3>
-                <div class="contenedor">
-                    <div class="caja fixed">
-                        Fixed
-                    </div>
+            </div>
+        </div>
+
+        <!-- CONTENEDOR 4: Fixed -->
+        <div class="caja-negra-individual">
+            <h3>Fixed</h3>
+            <div class="contenedor">
+                <div class="caja fixed">
+                    Fixed
                 </div>
+            </div>
+        </div>
 
-                <h3>Sticky</h3>
-
-                <div class="sticky-contenedor">
-
-                    <div class="sticky">
-                        Sticky
-                    </div>
-
-                    <p class="texto-sticky">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    </p>
-
+        <!-- CONTENEDOR 5: Sticky -->
+        <div class="caja-negra-individual">
+            <h3>Sticky</h3>
+            <div class="sticky-contenedor">
+                <div class="sticky">
+                    Sticky
                 </div>
-            </section>
-        </main>
-
+                <p class="texto-sticky">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+            </div>
+        </div>
+    </main>
 </body>
 
 </html>

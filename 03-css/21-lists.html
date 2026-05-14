@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>21 - Lists</title>
+    <link rel="stylesheet" href="../src/css/css.css">
+
+    <style>
+        .list-demo {
+            font-family: "Roboto Slab", serif;
+        }
+
+        .demo-block {
+            background: #1a1a1a;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 10px;
+            transition: 0.3s ease;
+        }
+
+        .demo-block:hover {
+            transform: translateX(5px);
+        }
+
+        .demo-title {
+            color: #bb4dff;
+            font-size: 1rem;
+            margin-bottom: 6px;
+            border-left: 3px solid #bb4dff;
+            padding-left: 10px;
+        }
+
+        .demo-desc {
+            color: #999;
+            font-size: 0.75rem;
+            margin-bottom: 12px;
+            padding-left: 13px;
+        }
+
+        .demo-content {
+            background: #0a0a0a;
+            padding: 14px;
+            border-radius: 8px;
+            color: white;
+        }
+
+        code {
+            background: #2a2a2a;
+            color: #bb4dff;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-family: monospace;
+        }
+
+        .disc-list {
+            list-style-type: disc;
+        }
+
+        .circle-list {
+            list-style-type: circle;
+        }
+
+        .square-list {
+            list-style-type: square;
+        }
+
+        .decimal-list {
+            list-style-type: decimal;
+        }
+
+        .roman-list {
+            list-style-type: upper-roman;
+        }
+
+        .inside-list {
+            list-style-position: inside;
+        }
+
+        .outside-list {
+            list-style-position: outside;
+        }
+
+        .none-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .none-list li {
+            background: #111;
+            margin: 8px 0;
+            padding: 10px;
+            border-radius: 8px;
+            border-left: 3px solid #bb4dff;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <main>
+
+        <div class="contenedor-botones">
+
+            <a href="../03-css/index3.html" class="boton">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#000"
+                    viewBox="0 0 256 256">
+                    <path
+                        d="M232,56A104.11,104.11,0,0,1,128,160H51.31l34.35,34.34a8,8,0,0,1-11.32,11.32l-48-48a8,8,0,0,1,0-11.32l48-48a8,8,0,0,1,11.32,11.32L51.31,144H128a88.1,88.1,0,0,0,88-88,8,8,0,0,1,16,0Z">
+                    </path>
+                </svg>
+            </a>
+
+            <a href="../index.html" class="boton">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000"
+                    viewBox="0 0 256 256">
+                    <path
+                        d="M219.31,108.68l-80-80a16,16,0,0,0-22.62,0l-80,80A15.87,15.87,0,0,0,32,120v96a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V160h32v56a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V120A15.87,15.87,0,0,0,219.31,108.68ZM208,208H160V152a8,8,0,0,0-8-8H104a8,8,0,0,0-8,8v56H48V120l80-80,80,80Z">
+                    </path>
+                </svg>
+            </a>
+
+        </div>
+
+        <br><br>
+
+        <header>
+            <h1>21 - Lists</h1>
+            <h2>Propiedades para personalizar listas en CSS.</h2>
+        </header>
+
+        <!-- LIST STYLE TYPE -->
+
+        <div class="caja-negra-individual">
+
+            <h3>List Style Type</h3>
+
+            <p class="section-desc">
+                Cambia el tipo de viñeta o numeración.
+            </p>
+
+            <div class="list-demo">
+
+                <div class="demo-block">
+
+                    <div class="demo-title">
+                        Disc
+                        <code>list-style-type: disc;</code>
+                    </div>
+
+                    <div class="demo-desc">
+                        Viñetas circulares rellenas.
+                    </div>
+
+                    <div class="demo-content">
+
+                        <ul class="disc-list">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                <div class="demo-block">
+
+                    <div class="demo-title">
+                        Circle
+                        <code>list-style-type: circle;</code>
+                    </div>
+
+                    <div class="demo-desc">
+                        Viñetas circulares vacías.
+                    </div>
+
+                    <div class="demo-content">
+
+                        <ul class="circle-list">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                <div class="demo-block">
+
+                    <div class="demo-title">
+                        Square
+                        <code>list-style-type: square;</code>
+                    </div>
+
+                    <div class="demo-desc">
+                        Viñetas cuadradas.
+                    </div>
+
+                    <div class="demo-content">
+
+                        <ul class="square-list">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ORDERED LIST -->
+
+        <div class="caja-negra-individual">
+
+            <h3>Ordered Lists</h3>
+
+            <p class="section-desc">
+                Cambia el estilo de numeración.
+            </p>
+
+            <div class="list-demo">
+
+                <div class="demo-block">
+
+                    <div class="demo-title">
+                        Decimal
+                        <code>list-style-type: decimal;</code>
+                    </div>
+
+                    <div class="demo-desc">
+                        Numeración normal.
+                    </div>
+
+                    <div class="demo-content">
+
+                        <ol class="decimal-list">
+                            <li>Inicio</li>
+                            <li>Proceso</li>
+                            <li>Final</li>
+                        </ol>
+
+                    </div>
+
+                </div>
+
+                <div class="demo-block">
+
+                    <div class="demo-title">
+                        Roman
+                        <code>list-style-type: upper-roman;</code>
+                    </div>
+
+                    <div class="demo-desc">
+                        Numeración romana.
+                    </div>
+
+                    <div class="demo-content">
+
+                        <ol class="roman-list">
+                            <li>Inicio</li>
+                            <li>Proceso</li>
+                            <li>Final</li>
+                        </ol>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- LIST POSITION -->
+
+        <div class="caja-negra-individual">
+
+            <h3>List Style Position</h3>
+
+            <p class="section-desc">
+                Controla la posición de las viñetas.
+            </p>
+
+            <div class="list-demo">
+
+                <div class="demo-block">
+
+                    <div class="demo-title">
+                        Inside
+                        <code>list-style-position: inside;</code>
+                    </div>
+
+                    <div class="demo-desc">
+                        Las viñetas quedan dentro del contenedor.
+                    </div>
+
+                    <div class="demo-content">
+
+                        <ul class="inside-list">
+                            <li>Elemento uno</li>
+                            <li>Elemento dos</li>
+                            <li>Elemento tres</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                <div class="demo-block">
+
+                    <div class="demo-title">
+                        Outside
+                        <code>list-style-position: outside;</code>
+                    </div>
+
+                    <div class="demo-desc">
+                        Las viñetas quedan fuera del contenedor.
+                    </div>
+
+                    <div class="demo-content">
+
+                        <ul class="outside-list">
+                            <li>Elemento uno</li>
+                            <li>Elemento dos</li>
+                            <li>Elemento tres</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- LIST NONE -->
+
+        <div class="caja-negra-individual">
+
+            <h3>List Style None</h3>
+
+            <p class="section-desc">
+                Elimina las viñetas de la lista.
+            </p>
+
+            <div class="list-demo">
+
+                <div class="demo-block">
+
+                    <div class="demo-title">
+                        None
+                        <code>list-style: none;</code>
+                    </div>
+
+                    <div class="demo-desc">
+                        Se usa mucho en menús de navegación.
+                    </div>
+
+                    <div class="demo-content">
+
+                        <ul class="none-list">
+                            <li>Inicio</li>
+                            <li>Servicios</li>
+                            <li>Contacto</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>

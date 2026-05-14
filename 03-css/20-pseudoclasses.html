@@ -1,0 +1,264 @@
+<!-- ========================= -->
+<!-- 20 - PSEUDOCLASSES -->
+<!-- ========================= -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20 - Pseudoclasses</title>
+    <link rel="stylesheet" href="../src/css/css.css">
+
+    <style>
+        .pseudo-demo {
+            font-family: "Roboto Slab", serif;
+        }
+
+        .demo-block {
+            background: #1a1a1a;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 10px;
+            transition: 0.3s ease;
+        }
+
+        .demo-block:hover {
+            transform: translateX(5px);
+        }
+
+        .demo-title {
+            color: #bb4dff;
+            font-size: 1rem;
+            margin-bottom: 6px;
+            border-left: 3px solid #bb4dff;
+            padding-left: 10px;
+            font-family: "Roboto Slab", serif;
+        }
+
+        .demo-desc {
+            color: #999;
+            font-size: 0.75rem;
+            margin-bottom: 12px;
+            padding-left: 13px;
+            font-family: "Roboto Slab", serif;
+        }
+
+        .demo-content {
+            background: #0a0a0a;
+            padding: 14px;
+            border-radius: 8px;
+            color: white;
+            font-family: "Roboto Slab", serif;
+        }
+
+        code {
+            background: #2a2a2a;
+            color: #bb4dff;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-family: monospace;
+        }
+
+        .btn-demo {
+            background: #bb4dff;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s ease;
+            font-family: "Roboto Slab", serif;
+        }
+
+        .btn-demo:hover {
+            background: white;
+            color: black;
+            transform: scale(1.05);
+        }
+
+        .input-demo {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 2px solid #333;
+            background: #111;
+            color: white;
+            outline: none;
+            font-family: "Roboto Slab", serif;
+        }
+
+        .input-demo:focus {
+            border-color: #bb4dff;
+            box-shadow: 0 0 10px #bb4dff88;
+        }
+
+        .list-demo li:first-child {
+            color: #bb4dff;
+        }
+
+        .list-demo li:last-child {
+            color: #00ffcc;
+        }
+
+        .section-desc {
+            font-family: "Roboto Slab", serif;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <main>
+
+        <div class="contenedor-botones">
+
+            <a href="../03-css/index3.html" class="boton">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#000"
+                    viewBox="0 0 256 256">
+                    <path
+                        d="M232,56A104.11,104.11,0,0,1,128,160H51.31l34.35,34.34a8,8,0,0,1-11.32,11.32l-48-48a8,8,0,0,1,0-11.32l48-48a8,8,0,0,1,11.32,11.32L51.31,144H128a88.1,88.1,0,0,0,88-88,8,8,0,0,1,16,0Z">
+                    </path>
+                </svg>
+            </a>
+
+            <a href="../index.html" class="boton">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000"
+                    viewBox="0 0 256 256">
+                    <path
+                        d="M219.31,108.68l-80-80a16,16,0,0,0-22.62,0l-80,80A15.87,15.87,0,0,0,32,120v96a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V160h32v56a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V120A15.87,15.87,0,0,0,219.31,108.68ZM208,208H160V152a8,8,0,0,0-8-8H104a8,8,0,0,0-8,8v56H48V120l80-80,80,80Z">
+                    </path>
+                </svg>
+            </a>
+
+        </div>
+
+        <br><br>
+
+        <header>
+            <h1>20 - Pseudoclasses</h1>
+            <h2>Estados especiales aplicados a elementos con CSS.</h2>
+        </header>
+
+        <!-- HOVER -->
+
+        <div class="caja-negra-individual">
+
+            <h3>:hover</h3>
+
+            <p class="section-desc">
+                Se activa cuando el cursor pasa sobre el elemento.
+            </p>
+
+            <div class="pseudo-demo">
+
+                <div class="demo-block">
+
+                    <div class="demo-title">
+                        Hover
+                        <code>:hover</code>
+                    </div>
+
+                    <div class="demo-desc">
+                        Cambia el color y tamaño al pasar el mouse.
+                    </div>
+
+                    <div class="demo-content">
+
+                        <button class="btn-demo">
+                            Pasa el mouse aquí
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- FOCUS -->
+
+        <div class="caja-negra-individual">
+
+            <h3>:focus</h3>
+
+            <p class="section-desc">
+                Se activa cuando el input recibe enfoque.
+            </p>
+
+            <div class="pseudo-demo">
+
+                <div class="demo-block">
+
+                    <div class="demo-title">
+                        Focus
+                        <code>:focus</code>
+                    </div>
+
+                    <div class="demo-desc">
+                        Cambia el borde al seleccionar el input.
+                    </div>
+
+                    <div class="demo-content">
+
+                        <input type="text"
+                            class="input-demo"
+                            placeholder="Haz click aquí">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- FIRST CHILD -->
+
+        <div class="caja-negra-individual">
+
+            <h3>:first-child y :last-child</h3>
+
+            <p class="section-desc">
+                Selecciona el primer o último elemento de un grupo.
+            </p>
+
+            <div class="pseudo-demo">
+
+                <div class="demo-block">
+
+                    <div class="demo-title">
+                        Child Selectors
+                        <code>:first-child</code>
+                    </div>
+
+                    <div class="demo-desc">
+                        El primer y último elemento cambian de color.
+                    </div>
+
+                    <div class="demo-content">
+
+                        <ul class="list-demo">
+                            <li>Primer elemento</li>
+                            <li>Segundo elemento</li>
+                            <li>Tercer elemento</li>
+                            <li>Último elemento</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>

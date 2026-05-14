@@ -1,0 +1,280 @@
+<!-- ========================= -->
+<!-- 19 - TEXT -->
+<!-- ========================= -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>19 - Text</title>
+    <link rel="stylesheet" href="../src/css/css.css">
+
+    <style>
+        .text-demo {
+            font-family: "Roboto Slab", serif;
+        }
+
+        .demo-block {
+            background: #1a1a1a;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 10px;
+            transition: 0.3s ease;
+        }
+
+        .demo-block:hover {
+            transform: translateX(5px);
+        }
+
+        .demo-title {
+            color: #bb4dff;
+            font-size: 1rem;
+            margin-bottom: 6px;
+            border-left: 3px solid #bb4dff;
+            padding-left: 10px;
+            font-family: "Roboto Slab", serif;
+        }
+
+        .demo-desc {
+            color: #999;
+            font-size: 0.75rem;
+            margin-bottom: 12px;
+            padding-left: 13px;
+            font-family: "Roboto Slab", serif;
+        }
+
+        .demo-content {
+            background: #0a0a0a;
+            padding: 14px;
+            border-radius: 8px;
+            color: white;
+            font-family: "Roboto Slab", serif;
+        }
+
+        code {
+            background: #2a2a2a;
+            color: #bb4dff;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-family: monospace;
+        }
+
+        .section-desc {
+            font-family: "Roboto Slab", serif;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <main>
+
+        <div class="contenedor-botones">
+
+            <a href="../03-css/index3.html" class="boton">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#000"
+                    viewBox="0 0 256 256">
+                    <path
+                        d="M232,56A104.11,104.11,0,0,1,128,160H51.31l34.35,34.34a8,8,0,0,1-11.32,11.32l-48-48a8,8,0,0,1,0-11.32l48-48a8,8,0,0,1,11.32,11.32L51.31,144H128a88.1,88.1,0,0,0,88-88,8,8,0,0,1,16,0Z">
+                    </path>
+                </svg>
+            </a>
+
+            <a href="../index.html" class="boton">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000"
+                    viewBox="0 0 256 256">
+                    <path
+                        d="M219.31,108.68l-80-80a16,16,0,0,0-22.62,0l-80,80A15.87,15.87,0,0,0,32,120v96a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V160h32v56a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V120A15.87,15.87,0,0,0,219.31,108.68ZM208,208H160V152a8,8,0,0,0-8-8H104a8,8,0,0,0-8,8v56H48V120l80-80,80,80Z">
+                    </path>
+                </svg>
+            </a>
+
+        </div>
+
+        <br><br>
+
+        <header>
+            <h1>19 - Text</h1>
+            <h2>Propiedades para modificar el texto en CSS.</h2>
+        </header>
+
+        <!-- TEXT ALIGN -->
+
+        <div class="caja-negra-individual">
+
+            <h3>Text Align</h3>
+
+            <p class="section-desc">
+                Permite alinear el texto horizontalmente.
+            </p>
+
+            <div class="text-demo">
+
+                <div class="demo-block">
+
+                    <div class="demo-title">
+                        Left
+                        <code>text-align: left;</code>
+                    </div>
+
+                    <div class="demo-desc">
+                        Alinea el texto a la izquierda.
+                    </div>
+
+                    <div class="demo-content" style="text-align: left;">
+                        Este texto está alineado a la izquierda.
+                    </div>
+
+                </div>
+
+                <div class="demo-block">
+
+                    <div class="demo-title">
+                        Center
+                        <code>text-align: center;</code>
+                    </div>
+
+                    <div class="demo-desc">
+                        Centra el texto horizontalmente.
+                    </div>
+
+                    <div class="demo-content" style="text-align: center;">
+                        Este texto está centrado.
+                    </div>
+
+                </div>
+
+                <div class="demo-block">
+
+                    <div class="demo-title">
+                        Right
+                        <code>text-align: right;</code>
+                    </div>
+
+                    <div class="demo-desc">
+                        Alinea el texto a la derecha.
+                    </div>
+
+                    <div class="demo-content" style="text-align: right;">
+                        Este texto está alineado a la derecha.
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- TEXT DECORATION -->
+
+        <div class="caja-negra-individual">
+
+            <h3>Text Decoration</h3>
+
+            <p class="section-desc">
+                Agrega líneas decorativas al texto.
+            </p>
+
+            <div class="text-demo">
+
+                <div class="demo-block">
+
+                    <div class="demo-title">
+                        Underline
+                        <code>text-decoration: underline;</code>
+                    </div>
+
+                    <div class="demo-desc">
+                        Subraya el texto.
+                    </div>
+
+                    <div class="demo-content"
+                        style="text-decoration: underline;">
+                        Texto subrayado
+                    </div>
+
+                </div>
+
+                <div class="demo-block">
+
+                    <div class="demo-title">
+                        Line Through
+                        <code>text-decoration: line-through;</code>
+                    </div>
+
+                    <div class="demo-desc">
+                        Tacha el texto.
+                    </div>
+
+                    <div class="demo-content"
+                        style="text-decoration: line-through;">
+                        Texto tachado
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- TEXT TRANSFORM -->
+
+        <div class="caja-negra-individual">
+
+            <h3>Text Transform</h3>
+
+            <p class="section-desc">
+                Modifica las mayúsculas y minúsculas del texto.
+            </p>
+
+            <div class="text-demo">
+
+                <div class="demo-block">
+
+                    <div class="demo-title">
+                        Uppercase
+                        <code>text-transform: uppercase;</code>
+                    </div>
+
+                    <div class="demo-desc">
+                        Convierte el texto en mayúsculas.
+                    </div>
+
+                    <div class="demo-content"
+                        style="text-transform: uppercase;">
+                        texto en mayúsculas
+                    </div>
+
+                </div>
+
+                <div class="demo-block">
+
+                    <div class="demo-title">
+                        Capitalize
+                        <code>text-transform: capitalize;</code>
+                    </div>
+
+                    <div class="demo-desc">
+                        Convierte la primera letra en mayúscula.
+                    </div>
+
+                    <div class="demo-content"
+                        style="text-transform: capitalize;">
+                        texto con capitalize aplicado
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>
