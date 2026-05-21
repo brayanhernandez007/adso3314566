@@ -10,7 +10,7 @@
         .typography-demo {
             text-align: center;
         }
-        
+
         .demo-block {
             background: #1a1a1a;
             padding: 15px;
@@ -19,11 +19,11 @@
             text-align: left;
             transition: transform 0.3s ease;
         }
-        
+
         .demo-block:hover {
             transform: translateX(5px);
         }
-        
+
         .demo-title {
             color: #bb4dff;
             font-size: 1rem;
@@ -31,21 +31,21 @@
             border-left: 3px solid #bb4dff;
             padding-left: 10px;
         }
-        
+
         .demo-desc {
             color: #888;
             font-size: 0.75rem;
             margin-bottom: 12px;
             padding-left: 13px;
         }
-        
+
         .demo-content {
             padding: 12px;
             background: #0a0a0a;
             border-radius: 8px;
             margin-top: 8px;
         }
-        
+
         code {
             background: #2a2a2a;
             padding: 2px 6px;
@@ -54,12 +54,12 @@
             font-size: 0.75rem;
             color: #bb4dff;
         }
-        
+
         hr {
             border-color: #bb4dff33;
             margin: 10px 0;
         }
-        
+
         /* Ajuste para la explicación debajo del título */
         .caja-negra-individual .section-desc {
             color: #aaa;
@@ -75,12 +75,16 @@
         <div class="contenedor-botones">
             <a href="../03-css/index3.html" class="boton">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#000" viewBox="0 0 256 256">
-                    <path d="M232,56A104.11,104.11,0,0,1,128,160H51.31l34.35,34.34a8,8,0,0,1-11.32,11.32l-48-48a8,8,0,0,1,0-11.32l48-48a8,8,0,0,1,11.32,11.32L51.31,144H128a88.1,88.1,0,0,0,88-88,8,8,0,0,1,16,0Z"></path>
+                    <path
+                        d="M232,56A104.11,104.11,0,0,1,128,160H51.31l34.35,34.34a8,8,0,0,1-11.32,11.32l-48-48a8,8,0,0,1,0-11.32l48-48a8,8,0,0,1,11.32,11.32L51.31,144H128a88.1,88.1,0,0,0,88-88,8,8,0,0,1,16,0Z">
+                    </path>
                 </svg>
             </a>
             <a href="../index.html" class="boton">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
-                    <path d="M219.31,108.68l-80-80a16,16,0,0,0-22.62,0l-80,80A15.87,15.87,0,0,0,32,120v96a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V160h32v56a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V120A15.87,15.87,0,0,0,219.31,108.68ZM208,208H160V152a8,8,0,0,0-8-8H104a8,8,0,0,0-8,8v56H48V120l80-80,80,80Z"></path>
+                    <path
+                        d="M219.31,108.68l-80-80a16,16,0,0,0-22.62,0l-80,80A15.87,15.87,0,0,0,32,120v96a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V160h32v56a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V120A15.87,15.87,0,0,0,219.31,108.68ZM208,208H160V152a8,8,0,0,0-8-8H104a8,8,0,0,0-8,8v56H48V120l80-80,80,80Z">
+                    </path>
                 </svg>
             </a>
         </div>
@@ -88,20 +92,26 @@
 
         <header>
             <h1>18 - Typography</h1>
-            <h2>Estilos y propiedades de tipografía en CSS para dar formato al texto.</h2>
+            <h2>
+                - Color <br>
+                - Family <br>
+                - Size <br>
+                - Weight
+            </h2>
         </header>
 
-        <!-- ============================================ -->
-        <!-- CONTENEDOR 1: TIPO DE LETRA (FONT FAMILY) -->
-        <!-- ============================================ -->
+        <br>
+
         <div class="caja-negra-individual">
             <h3>Font Family (Tipo de Letra)</h3>
-            <p class="section-desc">Define la familia tipográfica o fuente que se utilizará para mostrar el texto. CSS ofrece familias genéricas como serif, sans-serif, monospace, cursive y fantasy.</p>
-            
+            <p class="section-desc">Define la familia tipográfica o fuente que se utilizará para mostrar el texto. CSS
+                ofrece familias genéricas como serif, sans-serif, monospace, cursive y fantasy.</p>
+
             <div class="typography-demo">
                 <div class="demo-block">
                     <div class="demo-title">Roboto Slab <code>font-family: 'Roboto Slab', serif;</code></div>
-                    <div class="demo-desc">Fuente con remates (serif), ideal para textos largos y lectura en papel.</div>
+                    <div class="demo-desc">Fuente con remates (serif), ideal para textos largos y lectura en papel.
+                    </div>
                     <div class="demo-content" style="font-family: 'Roboto Slab', serif;">
                         La tipografía es el arte y técnica del manejo y selección de tipos.
                     </div>
@@ -117,7 +127,8 @@
 
                 <div class="demo-block">
                     <div class="demo-title">Dancing Script <code>font-family: 'Dancing Script', cursive;</code></div>
-                    <div class="demo-desc">Fuente cursiva, simula la escritura manual, ideal para títulos elegantes.</div>
+                    <div class="demo-desc">Fuente cursiva, simula la escritura manual, ideal para títulos elegantes.
+                    </div>
                     <div class="demo-content" style="font-family: 'Dancing Script', cursive;">
                         La tipografía es el arte y técnica del manejo y selección de tipos.
                     </div>
@@ -125,7 +136,8 @@
 
                 <div class="demo-block">
                     <div class="demo-title">Courier New <code>font-family: 'Courier New', monospace;</code></div>
-                    <div class="demo-desc">Fuente monoespaciada (monospace), todos los caracteres ocupan el mismo ancho.</div>
+                    <div class="demo-desc">Fuente monoespaciada (monospace), todos los caracteres ocupan el mismo ancho.
+                    </div>
                     <div class="demo-content" style="font-family: 'Courier New', monospace;">
                         La tipografía es el arte y técnica del manejo y selección de tipos.
                     </div>
@@ -138,12 +150,14 @@
         <!-- ============================================ -->
         <div class="caja-negra-individual">
             <h3>Font Size (Tamaño de Letra)</h3>
-            <p class="section-desc">Controla el tamaño del texto. Se puede usar px (píxeles), em (relativo al padre), rem (relativo a la raíz), % (porcentaje) y vw (viewport width).</p>
-            
+            <p class="section-desc">Controla el tamaño del texto. Se puede usar px (píxeles), em (relativo al padre),
+                rem (relativo a la raíz), % (porcentaje) y vw (viewport width).</p>
+
             <div class="typography-demo">
                 <div class="demo-block">
                     <div class="demo-title">Tamaño pequeño <code>font-size: 12px;</code></div>
-                    <div class="demo-desc">Útil para textos secundarios, notas al pie o información complementaria.</div>
+                    <div class="demo-desc">Útil para textos secundarios, notas al pie o información complementaria.
+                    </div>
                     <div class="demo-content">
                         <span style="font-size: 12px;">Texto con tamaño de 12 píxeles</span>
                     </div>
@@ -188,8 +202,9 @@
         <!-- ============================================ -->
         <div class="caja-negra-individual">
             <h3>Text Align (Posiciones / Alineación)</h3>
-            <p class="section-desc">Controla la alineación horizontal del texto dentro de su contenedor. Los valores principales son: left, center, right y justify.</p>
-            
+            <p class="section-desc">Controla la alineación horizontal del texto dentro de su contenedor. Los valores
+                principales son: left, center, right y justify.</p>
+
             <div class="typography-demo">
                 <div class="demo-block">
                     <div class="demo-title">Alineación izquierda <code>text-align: left;</code></div>
@@ -219,7 +234,8 @@
                     <div class="demo-title">Alineación justificada <code>text-align: justify;</code></div>
                     <div class="demo-desc">Distribuye el texto uniformemente entre los márgenes, común en libros.</div>
                     <div class="demo-content" style="text-align: justify;">
-                        Este texto está justificado, lo que significa que se distribuye uniformemente entre los márgenes izquierdo y derecho.
+                        Este texto está justificado, lo que significa que se distribuye uniformemente entre los márgenes
+                        izquierdo y derecho.
                     </div>
                 </div>
             </div>
@@ -230,8 +246,9 @@
         <!-- ============================================ -->
         <div class="caja-negra-individual">
             <h3>Espaciado (Letter Spacing & Line Height)</h3>
-            <p class="section-desc">El espaciado entre letras (letter-spacing) y entre líneas (line-height) mejora la legibilidad y la estética del texto.</p>
-            
+            <p class="section-desc">El espaciado entre letras (letter-spacing) y entre líneas (line-height) mejora la
+                legibilidad y la estética del texto.</p>
+
             <div class="typography-demo">
                 <div class="demo-block">
                     <div class="demo-title">Espaciado normal <code>letter-spacing: normal;</code></div>
@@ -284,8 +301,9 @@
         <!-- ============================================ -->
         <div class="caja-negra-individual">
             <h3>Font Weight & Style (Grosor y Estilo)</h3>
-            <p class="section-desc">font-weight controla el grosor del texto (normal, bold, 100-900). font-style define si el texto es normal, cursiva u oblicuo.</p>
-            
+            <p class="section-desc">font-weight controla el grosor del texto (normal, bold, 100-900). font-style define
+                si el texto es normal, cursiva u oblicuo.</p>
+
             <div class="typography-demo">
                 <div class="demo-block">
                     <div class="demo-title">Light <code>font-weight: 300;</code></div>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>23 - Sprite Animation</title>
+
+    <link rel="stylesheet" href="../src/css/css.css">
+
+    <style>
+        /* ========================= */
+        /* SPRITE 1 */
+        /* ========================= */
+
+        div#sprite {
+            background: url('../src/img/anim-sprite.png') no-repeat;
+            height: 256px;
+            width: 256px;
+            margin: 1rem auto;
+        }
+
+        div#sprite.sp1 { background-position: calc(-256px * 0) 0; }
+        div#sprite.sp2 { background-position: calc(-256px * 1) 0; }
+        div#sprite.sp3 { background-position: calc(-256px * 2) 0; }
+        div#sprite.sp4 { background-position: calc(-256px * 3) 0; }
+        div#sprite.sp5 { background-position: calc(-256px * 4) 0; }
+        div#sprite.sp6 { background-position: calc(-256px * 5) 0; }
+
+        /* ========================= */
+        /* SPRITE 2 - OGRO GRANDE */
+        /* ========================= */
+
+        .ogre-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px 0;
+            overflow: visible;
+        }
+
+        /* Contenedor más grande para que no se corte */
+        .ogre-scaled {
+            width: 500px;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: visible;
+        }
+
+        div#ogre {
+            background: url('../src/img/ogro.png') no-repeat;
+            width: 256px;
+            height: 256px;
+            margin: 0 auto;
+            transform: scale(1.6);
+            transform-origin: center center;
+        }
+
+        /* Posiciones del sprite OGRO (12 frames de 116px cada uno) */
+        div#ogre.og1 { background-position: calc(-256px * 0) 0; }
+        div#ogre.og2 { background-position: calc(-256px * 1) 0; }
+        div#ogre.og3 { background-position: calc(-256px * 2) 0; }
+        div#ogre.og4 { background-position: calc(-256px * 3) 0; }
+        div#ogre.og5 { background-position: calc(-256px * 4) 0; }
+        div#ogre.og6 { background-position: calc(-256px * 5) 0; }
+        div#ogre.og7 { background-position: calc(-256px * 6) 0; }
+        div#ogre.og8 { background-position: calc(-256px * 7) 0; }
+        div#ogre.og9 { background-position: calc(-256px * 8) 0; }
+        div#ogre.og10 { background-position: calc(-256px * 9) 0; }
+        div#ogre.og11 { background-position: calc(-256px * 10) 0; }
+        div#ogre.og12 { background-position: calc(-256px * 11) 0; }
+    </style>
+
+</head>
+
+<body>
+
+    <main>
+
+        <div class="contenedor-botones">
+
+            <a href="../03-css/index3.html" class="boton">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#000"
+                    viewBox="0 0 256 256">
+                    <path
+                        d="M232,56A104.11,104.11,0,0,1,128,160H51.31l34.35,34.34a8,8,0,0,1-11.32,11.32l-48-48a8,8,0,0,1,0-11.32l48-48a8,8,0,0,1,11.32,11.32L51.31,144H128a88.1,88.1,0,0,0,88-88,8,8,0,0,1,16,0Z">
+                    </path>
+                </svg>
+            </a>
+
+            <a href="../index.html" class="boton">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000"
+                    viewBox="0 0 256 256">
+                    <path
+                        d="M219.31,108.68l-80-80a16,16,0,0,0-22.62,0l-80,80A15.87,15.87,0,0,0,32,120v96a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V160h32v56a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V120A15.87,15.87,0,0,0,219.31,108.68ZM208,208H160V152a8,8,0,0,0-8-8H104a8,8,0,0,0-8,8v56H48V120l80-80,80,80Z">
+                    </path>
+                </svg>
+            </a>
+
+        </div>
+
+        <br><br>
+
+        <header>
+            <h1>23 - Sprite Animation</h1>
+            <h2>
+                An image sprite is a collection of images put into a single image.
+            </h2>
+        </header>
+
+        <br>
+
+        <!-- ========================= -->
+        <!-- SPRITE ORIGINAL -->
+        <!-- ========================= -->
+
+        <div class="caja-negra-individual">
+
+            <h3>Runner Sprite</h3>
+
+            <div id="sprite" class="sp1"></div>
+
+        </div>
+
+        <!-- ========================= -->
+        <!-- SPRITE OGRO GRANDE -->
+        <!-- ========================= -->
+
+        <div class="caja-negra-individual">
+
+            <h3>Ogre Sprite</h3>
+
+            <div class="ogre-container">
+                <div class="ogre-scaled">
+                    <div id="ogre" class="og1"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <script>
+        /* ========================= */
+        /* SPRITE 1 - RUNNER */
+        /* ========================= */
+
+        const sprite = document.getElementById('sprite')
+        const numSprite = 6
+        let count = 1
+
+        setInterval(() => {
+            sprite.className = ''
+            sprite.classList.add('sp' + count)
+
+            if (count == numSprite)
+                count = 1
+            else
+                count++
+        }, 100)
+
+        /* ========================= */
+        /* SPRITE 2 - OGRO */
+        /* ========================= */
+
+        const ogre = document.getElementById('ogre')
+        const numOgre = 12
+        let ogreCount = 1
+
+        setInterval(() => {
+            ogre.className = ''
+            ogre.classList.add('og' + ogreCount)
+
+            if (ogreCount == numOgre)
+                ogreCount = 1
+            else
+                ogreCount++
+        }, 120)
+    </script>
+
+</body>
+
+</html>
