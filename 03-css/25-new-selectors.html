@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>25 - New Selectors</title>
+    <link rel="stylesheet" href="../src/css/css.css">
+
+    <style>
+        /* ========================================= */
+        /* NEW SELECTORS - ESTILOS ADICIONALES */
+        /* ========================================= */
+
+        .selector-box {
+            background: rgba(20, 20, 20, 0.95);
+            border-radius: 18px;
+            padding: 1.2rem;
+            margin-top: 1rem;
+            border: 1px solid #bb4dff33;
+            transition: 0.3s ease;
+        }
+
+        .selector-box:hover {
+            border-color: #bb4dff;
+            box-shadow: 0 0 12px #bb4dff55;
+        }
+
+        .selector-box h4 {
+            color: #d77cff;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            padding-bottom: .5rem;
+            border-bottom: 2px solid #bb4dff55;
+        }
+
+        .example-box {
+            background-color: #0d0d0d;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #bb4dff22;
+        }
+
+        .example-box ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .example-box li {
+            margin: 0;
+            padding: 12px;
+            color: #ddd;
+            font-weight: 600;
+            border-bottom: 1px solid #bb4dff44;
+            transition: 0.3s ease;
+            list-style: none;
+        }
+
+        .example-box li:last-child {
+            border-bottom: none;
+        }
+
+        /* FIRST CHILD */
+        .first-example li:first-child {
+            color: #bb4dff;
+            background-color: #bb4dff15;
+        }
+
+        /* LAST CHILD */
+        .last-example li:last-child {
+            color: #bb4dff;
+            background-color: #bb4dff15;
+        }
+
+        /* NTH CHILD */
+        .nth-example li:nth-child(2) {
+            color: #d77cff;
+            background-color: #d77cff15;
+        }
+
+        /* HOVER BUTTON */
+        .btn-hover {
+            background: linear-gradient(45deg, #7b2cbf, #bb4dff);
+            border: none;
+            color: white;
+            padding: 14px 25px;
+            border-radius: 14px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-family: "Roboto Slab", serif;
+            transition: 0.3s ease;
+        }
+
+        .btn-hover:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px #bb4dff;
+            background: linear-gradient(45deg, #bb4dff, #e056fd);
+        }
+
+        /* TARGET */
+        .go-target {
+            color: #bb4dff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        .go-target:hover {
+            color: #ff66cc;
+        }
+
+        .target-demo {
+            color: #d77cff;
+            transition: 0.3s ease;
+        }
+
+        .target-demo:target {
+            color: white;
+            text-shadow: 0 0 10px #bb4dff, 0 0 20px #ff66cc;
+        }
+
+        /* SELECTION */
+        .selection-demo::selection {
+            background-color: #bb4dff;
+            color: white;
+        }
+
+        /* BEFORE */
+        .before-demo::before {
+            color: #bb4dff;
+        }
+
+        /* AFTER */
+        .after-demo::after {
+            color: #ff66cc;
+        }
+
+        /* FIRST LETTER */
+        .first-letter-demo::first-letter {
+            font-size: 2rem;
+            color: #bb4dff;
+            font-weight: bold;
+        }
+
+        /* FIRST LINE */
+        .first-line-demo::first-line {
+            color: #d77cff;
+            font-weight: bold;
+        }
+
+        /* BOARD */
+        .board {
+            display: grid;
+            grid-template-columns: repeat(8, 45px);
+            width: fit-content;
+            margin: auto;
+            border: 4px solid #bb4dff;
+            box-shadow: 0 0 15px #bb4dff55;
+        }
+
+        .board div {
+            width: 45px;
+            height: 45px;
+            background-color: #f3d9ff;
+        }
+
+        .board div:nth-child(odd) {
+            background-color: #2b1242;
+        }
+
+        .board div:nth-child(16n + 9),
+        .board div:nth-child(16n + 11),
+        .board div:nth-child(16n + 13),
+        .board div:nth-child(16n + 15) {
+            background-color: #f3d9ff;
+        }
+
+        .board div:nth-child(16n + 10),
+        .board div:nth-child(16n + 12),
+        .board div:nth-child(16n + 14),
+        .board div:nth-child(16n + 16) {
+            background-color: #2b1242;
+        }
+
+        @media (max-width: 768px) {
+            .board {
+                grid-template-columns: repeat(8, 30px);
+            }
+            .board div {
+                width: 30px;
+                height: 30px;
+            }
+            .selector-box h4 {
+                font-size: 1rem;
+            }
+            .example-box li {
+                font-size: .9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+
+        <div class="contenedor-botones">
+            <a href="../03-css/index3.html" class="boton">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#000" viewBox="0 0 256 256">
+                    <path d="M232,56A104.11,104.11,0,0,1,128,160H51.31l34.35,34.34a8,8,0,0,1-11.32,11.32l-48-48a8,8,0,0,1,0-11.32l48-48a8,8,0,0,1,11.32,11.32L51.31,144H128a88.1,88.1,0,0,0,88-88,8,8,0,0,1,16,0Z"></path>
+                </svg>
+            </a>
+            <a href="../index.html" class="boton">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
+                    <path d="M219.31,108.68l-80-80a16,16,0,0,0-22.62,0l-80,80A15.87,15.87,0,0,0,32,120v96a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V160h32v56a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V120A15.87,15.87,0,0,0,219.31,108.68ZM208,208H160V152a8,8,0,0,0-8-8H104a8,8,0,0,0-8,8v56H48V120l80-80,80,80Z"></path>
+                </svg>
+            </a>
+        </div>
+
+        <br><br>
+
+        <header>
+            <h1>25 - New Selectors</h1>
+            <h2>Pseudo Classes & Pseudo Elements</h2>
+        </header>
+
+        <!-- CADA .caja-negra-individual ES COMPLETAMENTE INDEPENDIENTE -->
+        <!-- NO HAY UN CONTENEDOR PADRE QUE LOS AGRUPE -->
+
+        <!-- FIRST CHILD -->
+        <div class="caja-negra-individual">
+            <h3>:first-child</h3>
+            <p>Selecciona el primer elemento hijo dentro de un contenedor.</p>
+            <div class="selector-box">
+                <div class="example-box first-example">
+                    <ul>
+                        <li>First Child</li>
+                        <li>Other Child</li>
+                        <li>Another Child</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- LAST CHILD -->
+        <div class="caja-negra-individual">
+            <h3>:last-child</h3>
+            <p>Selecciona el último elemento hijo de un elemento padre.</p>
+            <div class="selector-box">
+                <div class="example-box last-example">
+                    <ul>
+                        <li>Other Child</li>
+                        <li>Middle Child</li>
+                        <li>Last Child</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- NTH CHILD -->
+        <div class="caja-negra-individual">
+            <h3>:nth-child()</h3>
+            <p>Permite seleccionar elementos según su posición dentro de un grupo.</p>
+            <div class="selector-box">
+                <div class="example-box nth-example">
+                    <ul>
+                        <li>Child 1</li>
+                        <li>Child 2</li>
+                        <li>Child 3</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- HOVER -->
+        <div class="caja-negra-individual">
+            <h3>:hover</h3>
+            <p>Aplica estilos cuando el usuario pasa el cursor sobre un elemento.</p>
+            <div class="selector-box">
+                <button class="btn-hover">Hover Me</button>
+            </div>
+        </div>
+
+        <!-- TARGET -->
+        <div class="caja-negra-individual">
+            <h3>:target</h3>
+            <p>Selecciona un elemento cuando su id coincide con el enlace del navegador.</p>
+            <div class="selector-box">
+                <a href="#target-text" class="go-target">Go To Target</a>
+                <br><br>
+                <h4 id="target-text" class="target-demo">Target Element</h4>
+            </div>
+        </div>
+
+        <!-- SELECTION -->
+        <div class="caja-negra-individual">
+            <h3>::selection</h3>
+            <p>Permite cambiar el estilo del texto cuando es seleccionado con el mouse.</p>
+            <div class="selector-box">
+                <p class="selection-demo">Select this text to see the selection effect.</p>
+            </div>
+        </div>
+
+        <!-- BEFORE -->
+        <div class="caja-negra-individual">
+            <h3>::before</h3>
+            <p>Agrega contenido antes de un elemento usando CSS.</p>
+            <div class="selector-box">
+                <div class="example-box">
+                    <ul>
+                        <li class="before-demo">Example Before</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- AFTER -->
+        <div class="caja-negra-individual">
+            <h3>::after</h3>
+            <p>Agrega contenido después de un elemento usando CSS.</p>
+            <div class="selector-box">
+                <div class="example-box">
+                    <ul>
+                        <li class="after-demo">Example After</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- FIRST LETTER -->
+        <div class="caja-negra-individual">
+            <h3>::first-letter</h3>
+            <p>Permite modificar únicamente la primera letra de un texto.</p>
+            <div class="selector-box">
+                <div class="example-box">
+                    <p class="first-letter-demo">Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FIRST LINE -->
+        <div class="caja-negra-individual">
+            <h3>::first-line</h3>
+            <p>Aplica estilos solo a la primera línea de un párrafo.</p>
+            <div class="selector-box">
+                <div class="example-box">
+                    <p class="first-line-demo">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Exercitationem doloremque cupiditate architecto.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CHALLENGE -->
+        <div class="caja-negra-individual">
+            <h3>Challenge</h3>
+            <p>Ejemplo práctico utilizando :nth-child() para crear un tablero de ajedrez.</p>
+            <div class="selector-box">
+                <div class="board">
+                    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>27 - Box Shadow</title>
+    <link rel="stylesheet" href="../src/css/css.css">
+    <style>
+        /* ========================================= */
+        /* BOX SHADOW - ESTILOS                       */
+        /* ========================================= */
+
+        div.box {
+            border-radius: 20%;
+            height: 200px;
+            width: 200px;
+            background: linear-gradient(135deg, #bb4dff, #ff66cc, #7b2cbf);
+            margin: 0 auto;
+            transition: 0.3s ease;
+        }
+
+        /* Diferentes sombras */
+        div.box1 {
+            box-shadow: 0 0 12px #7829f0;
+        }
+
+        div.box2 {
+            box-shadow: -10px -10px 24px 0 #57ff79;
+        }
+
+        div.box3 {
+            box-shadow: 0 0 20px #fffa64;
+        }
+
+        div.box4 {
+            box-shadow: 4px 4px 0 #cc0,
+                        8px 8px 0 #00c,
+                        12px 12px 0 #c00;
+        }
+
+        div.box5 {
+            box-shadow: 0 0 10px #fffa64,
+                        0 0 20px #00c,
+                        0 0 30px #c00;
+        }
+
+        /* ========================================= */
+        /* COMPARATIVA - IMÁGENES UNA AL LADO DE LA OTRA */
+        /* ========================================= */
+        .comparison-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+
+        .comparison-item {
+            text-align: center;
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .comparison-item h4 {
+            color: #bb4dff;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            font-family: "Roboto Slab", serif;
+        }
+
+        .comparison-item .badge {
+            display: inline-block;
+            background: #bb4dff33;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
+            color: #bb4dff;
+        }
+
+        /* BOX-SHADOW: Imagen DENTRO de un contenedor */
+        .boxshadow-card {
+            background: #0d0d0d;
+            padding: 20px;
+            border-radius: 16px;
+            display: inline-block;
+            box-shadow: 0 15px 35px rgba(255, 250, 100, 0.5);
+        }
+
+        .boxshadow-card img {
+            display: block;
+            border-radius: 12px;
+        }
+
+        /* DROP-SHADOW: Imagen SOLA, sin contenedor */
+        .dropshadow-card {
+            display: inline-block;
+        }
+
+        .dropshadow-card img {
+            display: block;
+            border-radius: 12px;
+            filter: drop-shadow(0 15px 30px rgba(255, 250, 100, 0.6));
+        }
+
+        .comparison-img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .code-block {
+            background: #0d0d0d;
+            border-radius: 12px;
+            padding: 10px;
+            text-align: left;
+            font-family: 'Courier New', monospace;
+            font-size: 0.7rem;
+            color: #bb4dff;
+            margin-top: 1rem;
+            border: 1px solid #bb4dff33;
+        }
+
+        .code-block span {
+            color: #ff66cc;
+        }
+
+        .description-text {
+            color: #aaa;
+            font-size: 0.8rem;
+            margin-top: 0.8rem;
+            line-height: 1.4;
+        }
+
+        .comparison-note {
+            background: #1a1a2e;
+            border-left: 4px solid #bb4dff;
+            padding: 1rem;
+            margin-top: 1.5rem;
+            text-align: left;
+            border-radius: 8px;
+        }
+
+        .comparison-note p {
+            margin: 0.5rem 0;
+            color: #ccc;
+        }
+
+        .comparison-note strong {
+            color: #bb4dff;
+        }
+
+        /* Estilos para los contenedores individuales */
+        .selector-box {
+            background: rgba(20, 20, 20, 0.95);
+            border-radius: 18px;
+            padding: 1.5rem;
+            margin-top: 1rem;
+            border: 1px solid #bb4dff33;
+            transition: 0.3s ease;
+            text-align: center;
+        }
+
+        .selector-box:hover {
+            border-color: #bb4dff;
+            box-shadow: 0 0 12px #bb4dff55;
+        }
+
+        .shadow-code {
+            background-color: #0d0d0d;
+            border-radius: 12px;
+            padding: 10px 16px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            color: #bb4dff;
+            border: 1px solid #bb4dff33;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+
+        .shadow-description {
+            color: #aaa;
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+        }
+
+        .text-gray {
+            color: #aaa;
+        }
+
+        @media (max-width: 768px) {
+            div.box {
+                height: 150px;
+                width: 150px;
+            }
+            .comparison-img {
+                width: 130px;
+                height: 130px;
+            }
+            .comparison-wrapper {
+                gap: 1.5rem;
+            }
+        }
+
+        div.images img {
+            all: unset;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor-botones">
+        <a href="../03-css/index3.html" class="boton">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#000" viewBox="0 0 256 256">
+                <path d="M232,56A104.11,104.11,0,0,1,128,160H51.31l34.35,34.34a8,8,0,0,1-11.32,11.32l-48-48a8,8,0,0,1,0-11.32l48-48a8,8,0,0,1,11.32,11.32L51.31,144H128a88.1,88.1,0,0,0,88-88,8,8,0,0,1,16,0Z"></path>
+            </svg>
+        </a>
+        <a href="../index.html" class="boton">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
+                <path d="M219.31,108.68l-80-80a16,16,0,0,0-22.62,0l-80,80A15.87,15.87,0,0,0,32,120v96a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V160h32v56a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V120A15.87,15.87,0,0,0,219.31,108.68ZM208,208H160V152a8,8,0,0,0-8-8H104a8,8,0,0,0-8,8v56H48V120l80-80,80,80Z"></path>
+            </svg>
+        </a>
+    </div>
+
+    <br><br>
+
+    <main>
+        <header>
+            <h1>27 - Box Shadow</h1>
+            <h2>Property attaches one or more shadows to an element.</h2>
+        </header>
+
+        <!-- ========================================= -->
+        <!-- CONTENEDOR 1: box-shadow: 0 0 12px        -->
+        <!-- ========================================= -->
+        <div class="caja-negra-individual">
+            <h3>box-shadow: 0 0 12px #7829f0</h3>
+            <p>Sombra básica con desenfoque de 12px de color morado.</p>
+            <div class="selector-box">
+                <div class="box box1"></div>
+                <div class="shadow-code">box-shadow: 0 0 12px #7829f0;</div>
+                <div class="shadow-description">offset-x: 0 | offset-y: 0 | blur: 12px | color: morado</div>
+            </div>
+        </div>
+
+        <!-- ========================================= -->
+        <!-- CONTENEDOR 2: box-shadow: -10px -10px 24px 0 -->
+        <!-- ========================================= -->
+        <div class="caja-negra-individual">
+            <h3>box-shadow: -10px -10px 24px 0 #57ff79</h3>
+            <p>Sombra desplazada hacia arriba e izquierda de color verde.</p>
+            <div class="selector-box">
+                <div class="box box2"></div>
+                <div class="shadow-code">box-shadow: -10px -10px 24px 0 #57ff79;</div>
+                <div class="shadow-description">offset-x: -10px | offset-y: -10px | blur: 24px | color: verde</div>
+            </div>
+        </div>
+
+        <!-- ========================================= -->
+        <!-- CONTENEDOR 3: box-shadow: 0 0 20px        -->
+        <!-- ========================================= -->
+        <div class="caja-negra-individual">
+            <h3>box-shadow: 0 0 20px #fffa64</h3>
+            <p>Sombra con mayor desenfoque de color amarillo.</p>
+            <div class="selector-box">
+                <div class="box box3"></div>
+                <div class="shadow-code">box-shadow: 0 0 20px #fffa64;</div>
+                <div class="shadow-description">offset: 0 | blur: 20px | color: amarillo | efecto neón</div>
+            </div>
+        </div>
+
+        <!-- ========================================= -->
+        <!-- CONTENEDOR 4: box-shadow: multiple        -->
+        <!-- ========================================= -->
+        <div class="caja-negra-individual">
+            <h3>box-shadow: multiple</h3>
+            <p>Varias sombras separadas por coma: amarillo, azul y rojo.</p>
+            <div class="selector-box">
+                <div class="box box4"></div>
+                <div class="shadow-code">
+                    box-shadow: 4px 4px 0 #cc0,<br>
+                    8px 8px 0 #00c,<br>
+                    12px 12px 0 #c00;
+                </div>
+                <div class="shadow-description">Efecto 3D con sombras sólidas de colores amarillo, azul y rojo</div>
+            </div>
+        </div>
+
+        <!-- ========================================= -->
+        <!-- CONTENEDOR 5: box-shadow: va deep-shadow  -->
+        <!-- ========================================= -->
+        <div class="caja-negra-individual">
+            <h3>box-shadow: va deep-shadow</h3>
+            <p>Sombra múltiple con difuminado: amarillo, azul y rojo.</p>
+            <div class="selector-box">
+                <div class="box box5"></div>
+                <div class="shadow-code">
+                    box-shadow: 0 0 10px #fffa64,<br>
+                    0 0 20px #00c,<br>
+                    0 0 30px #c00;
+                </div>
+                <div class="shadow-description">Efecto neón profundo con colores amarillo, azul y rojo</div>
+            </div>
+        </div>
+
+        <!-- ========================================= -->
+        <!-- CONTENEDOR 6: box-shadow vs drop-shadow   -->
+        <!-- ========================================= -->
+        <div class="caja-negra-individual">
+            <h3>box-shadow vs drop-shadow</h3>
+            <p class="text-gray">La diferencia: box-shadow sombrea el contenedor (caja) - drop-shadow sombrea la forma real de la imagen</p>
+
+            <div class="selector-box">
+                
+                <!-- DOS IMÁGENES UNA AL LADO DE LA OTRA -->
+                <div class="comparison-wrapper">
+                    
+                    <!-- PRIMERA IMAGEN: BOX-SHADOW -->
+                    <div class="comparison-item">
+                        <div class="badge">box-shadow</div>
+                        <h4>Sombra de Caja</h4>
+                        <div class="boxshadow-card">
+                            <img src="../src/img/bugBunny.png" alt="Bug Bunny" class="comparison-img">
+                        </div>
+                        <div class="code-block">
+                            <span>.contenedor</span> {<br>
+                            &nbsp;&nbsp;<span>box-shadow</span>: 0 15px 35px rgba(255, 250, 100, 0.5);<br>
+                            &nbsp;&nbsp;<span>background</span>: #0d0d0d;<br>
+                            &nbsp;&nbsp;<span>padding</span>: 20px;<br>
+                            &nbsp;&nbsp;<span>border-radius</span>: 16px;<br>
+                            }
+                        </div>
+                        <div class="description-text">
+                            La sombra se aplica al <strong>CONTENEDOR</strong><br>
+                            Se ve un <strong>RECTÁNGULO SOMBREADO</strong> alrededor
+                        </div>
+                    </div>
+
+                    <!-- SEGUNDA IMAGEN: DROP-SHADOW -->
+                    <div class="comparison-item">
+                        <div class="badge">drop-shadow()</div>
+                        <h4>Sombra alrededor de la imagen</h4>
+                        <div class="dropshadow-card">
+                            <img src="../src/img/bugBunny.png" alt="Bug Bunny" class="comparison-img">
+                        </div>
+                        <div class="code-block">
+                            <span>.imagen</span> {<br>
+                            &nbsp;&nbsp;<span>filter</span>: drop-shadow(0 15px 30px rgba(255, 250, 100, 0.6));<br>
+                            &nbsp;&nbsp;<span>border-radius</span>: 12px;<br>
+                            }
+                        </div>
+                        <div class="description-text">
+                            La sombra sigue la <strong>FORMA REAL</strong> de la imagen<br>
+                            <strong>No hay contenedor</strong> visible
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="comparison-note">
+                    <p><strong>Diferencia clave:</strong></p>
+                    <p><strong>box-shadow:</strong> La sombra se aplica al rectángulo del contenedor (se ve una caja sombreada alrededor).</p>
+                    <p><strong>drop-shadow():</strong> La sombra sigue la forma real de la imagen (respeta bordes redondeados y transparencias).</p>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+</body>
+</html>
