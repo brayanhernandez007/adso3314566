@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>29 - New Backgrounds</title>
+    <link rel="stylesheet" href="../src/css/css.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
+
+        .bg {
+            width: 320px;
+            height: 450px;
+            background-image: url(../src/img/bg2.png), url(../src/img/bg3.png), url(../src/img/bg1.png);
+            border-radius: 4%;
+            margin: 0 auto;
+        }
+
+        .gr1 {
+            width: 320px;
+            height: 200px;
+            background: linear-gradient(to right, rgb(187, 105, 209), rgb(56, 9, 106));
+            border-radius: 4%;
+            margin: 0 auto;
+        }
+
+        .gr2 {
+            width: 320px;
+            height: 200px;
+            background: linear-gradient(rgb(167, 63, 236), rgb(47, 13, 72));
+            border-radius: 4%;
+            margin: 0 auto;
+        }
+
+        .ola {
+            width: 320px;
+            height: 200px;
+            background: linear-gradient(#ffcd00 0 50%, #003087 50% 80%, #c8102e 80% 100%);
+            border-radius: 4%;
+            margin: 0 auto;
+        }
+
+        .ver {
+            width: 320px;
+            height: 200px;
+            background: linear-gradient(to right, rgb(179, 126, 236) 50%, rgb(140, 0, 255) 50%);
+            border-radius: 4%;
+            background-size: 50px;
+            margin: 0 auto;
+        }
+
+        .rad {
+            width: 320px;
+            height: 200px;
+            background: radial-gradient(rgb(179, 126, 236), rgb(140, 0, 255));
+            border-radius: 4%;
+            margin: 0 auto;
+        }
+
+        .bull {
+            width: 320px;
+            height: 200px;
+            background: radial-gradient(circle, #fff 20%, #333 20%, #333 40%, #fff 40%, #fff 60%, #333 60%, #333 80%, #fff 80%, #fff 100%);
+            border-radius: 4%;
+            margin: 0 auto;
+        }
+
+        .comic {
+            width: 320px;
+            height: 200px;
+            background: conic-gradient(rgb(104, 119, 203), rgb(48, 69, 192), rgb(104, 119, 203), rgb(104, 119, 203), rgb(48, 69, 192), rgb(104, 119, 203));
+            border-radius: 4%;
+            margin: 0 auto;
+        }
+
+        .clip {
+            font-family: "Nosifer", sans-serif;
+            font-size: 100px;
+            background: linear-gradient(45deg, purple 0, red 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            filter: drop-shadow(0 0 5px rgb(255, 0, 221));
+        }
+
+        .clip2 {
+            font-family: "Nosifer", sans-serif;
+            font-size: 100px;
+            background: url(../src/img/rayos.jpg);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            filter: drop-shadow(0 0 5px rgb(0, 110, 255));
+        }
+
+        .mask {
+            width: 320px;
+            height: 200px;
+            background: linear-gradient(rgb(244, 255, 83), rgb(255, 107, 1));
+            mask-image: url(../src/img/icono\ corona.svg);
+            -webkit-mask-image: url(../src/img/icono\ corona.svg);
+            mask-repeat: no-repeat;
+            -webkit-mask-repeat: no-repeat;
+            mask-position: center;
+            -webkit-mask-position: center;
+            mask-size: contain;
+            -webkit-mask-size: contain;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="contenedor-botones">
+
+            <a href="../03-css/index3.html" class="boton">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#000" viewBox="0 0 256 256">
+                    <path
+                        d="M232,56A104.11,104.11,0,0,1,128,160H51.31l34.35,34.34a8,8,0,0,1-11.32,11.32l-48-48a8,8,0,0,1,0-11.32l48-48a8,8,0,0,1,11.32,11.32L51.31,144H128a88.1,88.1,0,0,0,88-88,8,8,0,0,1,16,0Z">
+                    </path>
+                </svg>
+            </a>
+
+            <a href="../index.html" class="boton">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
+                    <path
+                        d="M219.31,108.68l-80-80a16,16,0,0,0-22.62,0l-80,80A15.87,15.87,0,0,0,32,120v96a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V160h32v56a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V120A15.87,15.87,0,0,0,219.31,108.68ZM208,208H160V152a8,8,0,0,0-8-8H104a8,8,0,0,0-8,8v56H48V120l80-80,80,80Z">
+                    </path>
+                </svg>
+            </a>
+        </div>
+        <br>
+        <br>
+        <main>
+            <header>
+                <h1>29 - New Backgrounds</h1>
+                <h2>New Features (multiple, gradients, clip).</h2>
+            </header>
+            <div class="caja-negra-individual">
+                <h3>Bgs Multiples</h3>
+                <div class="bg"></div>
+            </div>
+            <div class="caja-negra-individual">
+                <h3>Bgs Gradient</h3>
+                <h4>Linear gradient left to right</h4>
+                <br>
+                <div class="gr1"></div>
+                <br>
+                <div class="gr2"></div>
+            </div>
+            <div class="caja-negra-individual">
+                <h3>Colombia flag with Gradients</h3>
+                <div class="ola"></div>
+            </div>
+            <div class="caja-negra-individual">
+                <h3>Verical Lines</h3>
+                <div class="ver"></div>
+            </div>
+            <div class="caja-negra-individual">
+                <h3>Radial Gradient</h3>
+                <div class="rad"></div>
+            </div>
+            <div class="caja-negra-individual">
+                <h3>Bullseye</h3>
+                <div class="bull"></div>
+            </div>
+            <div class="caja-negra-individual">
+                <h3>Comic Gradient</h3>
+                <div class="comic"></div>
+            </div>
+            <div class="caja-negra-individual">
+                <h3>Bgs Clip</h3>
+                <div class="clip">ADSO</div>
+                <div class="clip2">FIRE</div>
+            </div>
+            <div class="caja-negra-individual">
+                <h3>Bgs Mask</h3>
+                <div class="mask"></div>
+            </div>
+        </main>
+
+</body>
+
+</html>

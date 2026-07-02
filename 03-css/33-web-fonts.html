@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>33 - Web Fonts</title>
+    <link rel="stylesheet" href="../src/css/css.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Nosifer&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:wght@300;400;700&display=swap');
+
+        /* Estilos para las cajas */
+        .caja-negra-individual {
+            background-color: #1a1a1a;
+            border-radius: 12px;
+            padding: 40px 30px;
+            margin: 20px auto;
+            max-width: 600px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        /* Ejemplo con Kaushan Script */
+        .fuente-kaushan {
+            font-family: "Kaushan Script", cursive;
+            font-size: 60px;
+            color: #ffffff;
+            text-shadow: 0 2px 10px rgba(157, 4, 213, 0.5);
+            margin: 10px 0;
+        }
+
+        /* Ejemplo con Nosifer */
+        .fuente-nosifer {
+            font-family: "Nosifer", sans-serif;
+            font-size: 45px;
+            color: #ff4444;
+            text-shadow: 0 0 20px rgba(255, 68, 68, 0.5);
+            margin: 10px 0;
+            letter-spacing: 2px;
+        }
+
+        /* Ejemplo con Playfair Display */
+        .fuente-playfair {
+            font-family: "Playfair Display", serif;
+            font-size: 50px;
+            color: #4fc3f7;
+            font-weight: 700;
+            font-style: italic;
+            text-shadow: 0 2px 15px rgba(79, 195, 247, 0.4);
+            margin: 10px 0;
+        }
+
+        /* Ejemplo con Roboto */
+        .fuente-roboto {
+            font-family: "Roboto", sans-serif;
+            font-size: 40px;
+            color: #81c784;
+            font-weight: 300;
+            text-shadow: 0 2px 10px rgba(129, 199, 132, 0.3);
+            margin: 10px 0;
+            letter-spacing: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="contenedor-botones">
+
+            <a href="../03-css/index3.html" class="boton">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#000" viewBox="0 0 256 256">
+                    <path d="M232,56A104.11,104.11,0,0,1,128,160H51.31l34.35,34.34a8,8,0,0,1-11.32,11.32l-48-48a8,8,0,0,1,0-11.32l48-48a8,8,0,0,1,11.32,11.32L51.31,144H128a88.1,88.1,0,0,0,88-88,8,8,0,0,1,16,0Z"></path>
+                </svg>
+            </a>
+
+            <a href="../index.html" class="boton">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
+                    <path d="M219.31,108.68l-80-80a16,16,0,0,0-22.62,0l-80,80A15.87,15.87,0,0,0,32,120v96a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V160h32v56a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V120A15.87,15.87,0,0,0,219.31,108.68ZM208,208H160V152a8,8,0,0,0-8-8H104a8,8,0,0,0-8,8v56H48V120l80-80,80,80Z"></path>
+                </svg>
+            </a>
+        </div>
+        <br>
+        <br>
+        <main>
+            <header>
+                <h1>33 - Web Fonts</h1>
+                <h2>Use fonts that are not installed on the user's computer.</h2>
+            </header>
+
+            <!-- Kaushan Script -->
+            <div class="caja-negra-individual">
+                <div class="fuente-kaushan">Kaushan Script</div>
+                <p style="color: #888; font-family: Arial, sans-serif; font-size: 14px;">Fuente cursiva elegante</p>
+            </div>
+
+            <!-- Nosifer -->
+            <div class="caja-negra-individual">
+                <div class="fuente-nosifer">NOSIFER</div>
+                <p style="color: #888; font-family: Arial, sans-serif; font-size: 14px;">Fuente gótica y llamativa</p>
+            </div>
+
+            <!-- Playfair Display -->
+            <div class="caja-negra-individual">
+                <div class="fuente-playfair">Playfair Display</div>
+                <p style="color: #888; font-family: Arial, sans-serif; font-size: 14px;">Fuente serif con estilo</p>
+            </div>
+
+            <!-- Roboto -->
+            <div class="caja-negra-individual">
+                <div class="fuente-roboto">ROBOTO</div>
+                <p style="color: #888; font-family: Arial, sans-serif; font-size: 14px;">Fuente sans-serif moderna</p>
+            </div>
+
+        </main>
+</body>
+
+</html>

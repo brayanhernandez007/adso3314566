@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>31 - Filters</title>
+    <link rel="stylesheet" href="../src/css/css.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Nosifer&display=swap');
+
+        /* Estilos para cada caja individual */
+        .caja-negra-individual {
+            background-color: #1a1a1a;
+            border-radius: 12px;
+            padding: 30px 20px;
+            margin: 20px auto;
+            max-width: 500px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        .caja-negra-individual h3 {
+            color: #ffffff;
+            font-family: "Kaushan Script", cursive;
+            font-size: 28px;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 10px rgba(157, 4, 213, 0.5);
+        }
+
+        .caja-negra-individual p {
+            color: #aaaaaa;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        /* Estilos para las imágenes dentro de cada caja */
+        .caja-negra-individual img {
+            all: unset;
+            margin: 0 auto;
+            display: flex;
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Filtros individuales para cada caja */
+        .caja-blur img {
+            filter: blur(5px);
+            transition: filter 0.5s ease;
+        }
+
+        .caja-blur img:hover {
+            filter: none;
+        }
+
+        .caja-brightness img {
+            filter: brightness(2);
+            transition: filter 0.5s ease;
+        }
+
+        .caja-brightness img:hover {
+            filter: none;
+        }
+
+        .caja-sepia img {
+            filter: sepia();
+            transition: filter 0.5s ease;
+        }
+
+        .caja-sepia img:hover {
+            filter: none;
+        }
+
+        .caja-contrast img {
+            filter: contrast(2);
+            transition: filter 0.5s ease;
+        }
+
+        .caja-contrast img:hover {
+            filter: none;
+        }
+
+        .caja-invert img {
+            filter: invert();
+            transition: filter 0.5s ease;
+        }
+
+        .caja-invert img:hover {
+            filter: none;
+        }
+
+        .caja-saturate img {
+            filter: saturate(2);
+            transition: filter 0.5s ease;
+        }
+
+        .caja-saturate img:hover {
+            filter: none;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="contenedor-botones">
+
+            <a href="../03-css/index3.html" class="boton">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#000" viewBox="0 0 256 256">
+                    <path d="M232,56A104.11,104.11,0,0,1,128,160H51.31l34.35,34.34a8,8,0,0,1-11.32,11.32l-48-48a8,8,0,0,1,0-11.32l48-48a8,8,0,0,1,11.32,11.32L51.31,144H128a88.1,88.1,0,0,0,88-88,8,8,0,0,1,16,0Z"></path>
+                </svg>
+            </a>
+
+            <a href="../index.html" class="boton">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
+                    <path d="M219.31,108.68l-80-80a16,16,0,0,0-22.62,0l-80,80A15.87,15.87,0,0,0,32,120v96a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V160h32v56a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V120A15.87,15.87,0,0,0,219.31,108.68ZM208,208H160V152a8,8,0,0,0-8-8H104a8,8,0,0,0-8,8v56H48V120l80-80,80,80Z"></path>
+                </svg>
+            </a>
+        </div>
+        <br>
+        <br>
+        <main>
+            <header>
+                <h1>31 - Filters</h1>
+                <h2>Defines visual effects (like blur and saturation).</h2>
+            </header>
+
+            <!-- Normal -->
+            <div class="caja-negra-individual">
+                <h3>Normal</h3>
+                <img src="../src/img/cuphead.png" alt="Imagen normal">
+            </div>
+
+            <!-- Blur -->
+            <div class="caja-negra-individual caja-blur">
+                <h3>Blur</h3>
+                <img src="../src/img/cuphead.png" alt="Imagen con blur">
+                <p>Pasa el mouse para quitar el filtro</p>
+            </div>
+
+            <!-- Brightness -->
+            <div class="caja-negra-individual caja-brightness">
+                <h3>Brightness</h3>
+                <img src="../src/img/cuphead.png" alt="Imagen con brillo">
+                <p>Pasa el mouse para quitar el filtro</p>
+            </div>
+
+            <!-- Sepia -->
+            <div class="caja-negra-individual caja-sepia">
+                <h3>Sepia</h3>
+                <img src="../src/img/cuphead.png" alt="Imagen sepia">
+                <p>Pasa el mouse para quitar el filtro</p>
+            </div>
+
+            <!-- Contrast -->
+            <div class="caja-negra-individual caja-contrast">
+                <h3>Contrast</h3>
+                <img src="../src/img/cuphead.png" alt="Imagen con contraste">
+                <p>Pasa el mouse para quitar el filtro</p>
+            </div>
+
+            <!-- Invert -->
+            <div class="caja-negra-individual caja-invert">
+                <h3>Invert</h3>
+                <img src="../src/img/cuphead.png" alt="Imagen invertida">
+                <p>Pasa el mouse para quitar el filtro</p>
+            </div>
+
+            <!-- Saturate -->
+            <div class="caja-negra-individual caja-saturate">
+                <h3>Saturate</h3>
+                <img src="../src/img/cuphead.png" alt="Imagen con saturación">
+                <p>Pasa el mouse para quitar el filtro</p>
+            </div>
+
+        </main>
+</body>
+
+</html>

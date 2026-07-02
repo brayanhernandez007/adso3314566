@@ -4,10 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>01 - Document Style</title>
+    <title>32 - Clip Path</title>
     <link rel="stylesheet" href="../src/css/css.css">
     <style>
+        .clip1 {
+            clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+            background-image: url(../src/img/clip1.jpg);
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+        }
 
+        .clip2 {
+            clip-path: circle(50% at 50% 50%);
+            background-image: url(../src/img/clip2.webp);
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+        }
     </style>
 </head>
 
@@ -35,11 +49,14 @@
         <br>
         <main>
             <header>
-                <h1>01 - Document Style</h1>
-                <h2></h2>
+                <h1>32 - Clip Path</h1>
+                <h2>Property lets you clip an element to a basic shape.</h2>
             </header>
             <div class="caja-negra-individual">
-
+                <div class="clip1"></div>
+                <br>
+                <div class="clip2"></div>
+                <br>
             </div>
         </main>
 

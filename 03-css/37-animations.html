@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>37 - Animations</title>
+    <link rel="stylesheet" href="../src/css/css.css">
+    <style>
+        .caja-negra-individual .jungle {
+            background: url(../src/img/jungle.png) no-repeat center;
+            background-size: cover;
+            border-radius: 4px;
+            margin-block: 2rem;
+            position: relative;
+            height: 471px;
+            width: 380px;
+            margin-left: auto;
+            margin-right: auto;
+            overflow: hidden;
+
+            img {
+                all: unset;
+                border-radius: 0;
+                border: none;
+                position: absolute;
+            }
+
+            img.logo {
+                top: 10px;
+                left: 30px;
+                height: 72px;
+                width: 317px;
+                object-fit: contain;
+                z-index: 9;
+                animation: 1s animLogo ease-in infinite;
+            }
+
+            img.dk {
+                top: 180px;
+                left: 110px;
+                width: 150px;
+                object-fit: contain;
+                z-index: 8;
+                animation: 2s animDK ease-out infinite;
+            }
+
+            div.move {
+                position: absolute;
+                bottom: 100px;
+                left: 0;
+                width: 160px;
+                height: 150px;
+
+                img {
+                    width: 120px;
+                    height: auto;
+                    object-fit: contain;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    animation: 5s animRyno ease-in-out infinite;
+                }
+            }
+        }
+
+        @keyframes animLogo {
+            0%,
+            100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        @keyframes animDK {
+            0% {
+                top: 180px;
+                transform: rotateX(0deg);
+            }
+            40% {
+                top: 80px;
+                transform: rotateX(0deg);
+            }
+            50% {
+                top: 80px;
+                transform: rotateX(360deg);
+            }
+            60% {
+                top: 80px;
+                transform: rotateX(360deg);
+            }
+            100% {
+                top: 180px;
+                transform: rotateX(360deg);
+            }
+        }
+
+        @keyframes animRyno {
+            0% {
+                left: -30px;
+                transform: scaleX(1) rotate(0deg);
+            }
+            /* Corre hacia la derecha */
+            20% {
+                left: 280px;
+                transform: scaleX(1) rotate(0deg);
+            }
+            /* CUERNAZO - se inclina hacia arriba */
+            22% {
+                transform: scaleX(1) rotate(-20deg);
+                left: 280px;
+            }
+            25% {
+                transform: scaleX(1) rotate(-20deg);
+                left: 280px;
+            }
+            /* Se voltea y sigue */
+            26% {
+                transform: scaleX(-1) rotate(-20deg);
+                left: 280px;
+            }
+            28% {
+                transform: scaleX(-1) rotate(0deg);
+                left: 280px;
+            }
+            /* Corre hacia la izquierda */
+            45% {
+                left: -30px;
+                transform: scaleX(-1) rotate(0deg);
+            }
+            /* CUERNAZO - se inclina hacia arriba */
+            47% {
+                transform: scaleX(-1) rotate(20deg);
+                left: -30px;
+            }
+            50% {
+                transform: scaleX(-1) rotate(20deg);
+                left: -30px;
+            }
+            /* Se voltea y sigue */
+            51% {
+                transform: scaleX(1) rotate(20deg);
+                left: -30px;
+            }
+            53% {
+                transform: scaleX(1) rotate(0deg);
+                left: -30px;
+            }
+            /* Corre hacia la derecha */
+            70% {
+                left: 280px;
+                transform: scaleX(1) rotate(0deg);
+            }
+            /* CUERNAZO - se inclina hacia arriba */
+            72% {
+                transform: scaleX(1) rotate(-20deg);
+                left: 280px;
+            }
+            75% {
+                transform: scaleX(1) rotate(-20deg);
+                left: 280px;
+            }
+            /* Se voltea y sigue */
+            76% {
+                transform: scaleX(-1) rotate(-20deg);
+                left: 280px;
+            }
+            78% {
+                transform: scaleX(-1) rotate(0deg);
+                left: 280px;
+            }
+            /* Corre hacia la izquierda */
+            95% {
+                left: -30px;
+                transform: scaleX(-1) rotate(0deg);
+            }
+            100% {
+                left: -30px;
+                transform: scaleX(-1) rotate(0deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="contenedor-botones">
+
+            <a href="../03-css/index3.html" class="boton">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#000" viewBox="0 0 256 256">
+                    <path d="M232,56A104.11,104.11,0,0,1,128,160H51.31l34.35,34.34a8,8,0,0,1-11.32,11.32l-48-48a8,8,0,0,1,0-11.32l48-48a8,8,0,0,1,11.32,11.32L51.31,144H128a88.1,88.1,0,0,0,88-88,8,8,0,0,1,16,0Z"></path>
+                </svg>
+            </a>
+
+            <a href="../index.html" class="boton">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
+                    <path d="M219.31,108.68l-80-80a16,16,0,0,0-22.62,0l-80,80A15.87,15.87,0,0,0,32,120v96a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V160h32v56a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V120A15.87,15.87,0,0,0,219.31,108.68ZM208,208H160V152a8,8,0,0,0-8-8H104a8,8,0,0,0-8,8v56H48V120l80-80,80,80Z"></path>
+                </svg>
+            </a>
+        </div>
+        <br>
+        <br>
+        <main>
+            <header>
+                <h1>37 - Animations</h1>
+                <h2>Lets an element gradually change from one style to another.</h2>
+            </header>
+
+            <div class="caja-negra-individual">
+                <div class="jungle">
+                    <img class="logo" src="../src/img/logo-dk.png" alt="logo">
+                    <img class="dk" src="../src/img/dk.png" alt="dk">
+                    <div class="move">
+                        <img src="../src/img/ryno.png" alt="ryno">
+                    </div>
+                </div>
+            </div>
+
+        </main>
+</body>
+
+</html>
